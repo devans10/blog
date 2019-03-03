@@ -45,8 +45,8 @@ disqusShortname = "www-daveevans-us"
   url = "/about/"
 [[menu.main]]
   name = "Projects"
-  url = "https://myawesomeproject.com"
   weight = 3
+  url = "/projects/"
 
 [[params.social]]
     name = "Twitter"
