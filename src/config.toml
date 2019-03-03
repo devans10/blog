@@ -1,0 +1,70 @@
+baseURL = "http://www.daveevans.us/"
+title = "Dave Evans"
+googleAnalytics = "UA-124360075-1"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "www-daveevans-us"
+
+
+[params]
+    author = "Dave Evans"
+    info = "Sysadmin and Linux Enthusiast"
+    description = "Dave Evans' personal website"
+    keywords = "blog,devops,personal"
+    avatarurl = "img/avatar.jpg"
+
+    favicon_32 = "/img/favicon.ico"
+    favicon_16 = "/img/favicon.ico"
+
+    footercontent = ""
+
+    hidecredits = false
+    hidecopyright = false
+
+    rtl = false
+
+    math = true
+    custom_css = ["css/custom.css"]
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 1
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "/about/"
+[[menu.main]]
+  name = "Projects"
+  url = "https://myawesomeproject.com"
+  weight = 3
+
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter fa-2x"
+    weight = 1
+    url = "https://twitter.com/dave_evans67"
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 2
+    url = "https://github.com/devans10"
+[[params.social]]
+    name = "Gitlab"
+    icon = "fab fa-gitlab fa-2x"
+    weight = 2
+    url = "https://gitlab.com/devans10/"
+[[params.social]]
+    name = "Facebook"
+    icon = "fab fa-facebook fa=2x"
+    weight = 3
+    url = "https://facebook.com/dave.evans.50115"
