@@ -9,6 +9,7 @@ module "kubernetes" {
   docker_username = "${var.docker_username}"
   docker_password = "${var.docker_password}"
   docker_email = "${var.docker_email}"
+  image = "${var.image}"
 }
 
 module "dns" {

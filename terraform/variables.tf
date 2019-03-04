@@ -9,3 +9,5 @@ variable "docker_password" {}
 variable "do_token" {}
 
 variable "sitename" {}
+
+variable "image" {}

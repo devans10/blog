@@ -55,7 +55,7 @@ resource "kubernetes_deployment" "blog" {
       spec {
         container {
            name = "blog"
-           image = "devans10/blog:1.0"
+           image = "${var.image}"
            image_pull_policy = "Always"
            port {
              container_port = "80"
