@@ -69,6 +69,7 @@ resource "kubernetes_deployment" "blog" {
    }
 }
 
+
 resource "kubernetes_service" "blog" {
   metadata {
     name = "blog"
