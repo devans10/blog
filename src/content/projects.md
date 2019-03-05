@@ -6,7 +6,7 @@ slug = ""
 +++
 
 #### Terraform Provider for Purestorage Flasharray
-- [Project Site](http://site.doesnt.exist.yec)
+- Project Site (Under Construction)
 - [Github Repository](https://github.com/devans10/terraform-provider-purestorage)
 
 #### Golang library for Purestorage
