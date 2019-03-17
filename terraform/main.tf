@@ -27,5 +27,5 @@ module "deployment" {
 module "dns" {
   source = "./dns"
   sitename = "${var.sitename}"
-  ipaddress = "${module.deployment.loadbalancer_ip}"
+  ipaddress = "${module.kubernetes.nginx_ingress_ip}"
 }

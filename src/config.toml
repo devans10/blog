@@ -1,4 +1,4 @@
-baseURL = "http://www.daveevans.us/"
+baseURL = "https://www.daveevans.us/"
 title = "Dave Evans"
 googleAnalytics = "UA-124360075-1"
 theme = "hugo-coder"

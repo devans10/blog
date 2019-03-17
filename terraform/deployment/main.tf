@@ -7,17 +7,9 @@ locals {
     }
   }
 }
-
-resource "kubernetes_namespace" "blog" {
-  metadata {
-    name = "blog"
-  }
-}
-
 resource "kubernetes_secret" "regsecret" {
   metadata {
     name = "regsecret"
-    namespace = "${kubernetes_namespace.blog.metadata.0.name}"
   }
 
   data {
@@ -30,7 +22,6 @@ resource "kubernetes_secret" "regsecret" {
 resource "kubernetes_deployment" "blog" {
   metadata {
     name = "blog"
-    namespace = "${kubernetes_namespace.blog.metadata.0.name}"
     labels {
       app = "blog"
     }
@@ -73,18 +64,16 @@ resource "kubernetes_deployment" "blog" {
 resource "kubernetes_service" "blog" {
   metadata {
     name = "blog"
-    namespace = "${kubernetes_namespace.blog.metadata.0.name}"
   }
   spec {
     selector {
       app = "${kubernetes_deployment.blog.metadata.0.labels.app}"
     }
-    session_affinity = "ClientIP"
     port {
       port = 80
       target_port = 80
     }
-
-    type = "LoadBalancer"
   }
 }
+
+
