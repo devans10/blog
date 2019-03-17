@@ -68,3 +68,8 @@ disqusShortname = "www-daveevans-us"
     icon = "fab fa-facebook fa=2x"
     weight = 3
     url = "https://facebook.com/dave.evans.50115"
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    weight = 4
+    url = "https://www.linkedin.com/in/david-evans-5a6156b4/"
