@@ -27,4 +27,5 @@ docker_password = "<docker hub password>"
 do_token = "<do-token>"
 sitename = "www"
 image = "devans10/blog:latest"
+cluster_name = "<DO Kubernetes Cluster>"
 ```
