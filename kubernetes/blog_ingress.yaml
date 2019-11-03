@@ -9,6 +9,7 @@ spec:
   tls:
   - hosts:
     - www.daveevans.us
+    - www.terraform-provider-flash.com
     secretName: letsencrypt-prod
   rules:
   - host: www.daveevans.us
@@ -16,4 +17,10 @@ spec:
       paths:
       - backend:
           serviceName: blog
+          servicePort: 80
+  - host: www.terraform-provider-flash.com
+    http:
+      paths:
+      - backend:
+          serviceName: terraform-provider-flash-website
           servicePort: 80
