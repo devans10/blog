@@ -195,6 +195,10 @@ img {
           line-height: 4.4rem; } }
   .content article footer {
     margin-top: 4.0rem; }
+    .content article footer .see-also {
+      margin: 3.2rem 0; }
+      .content article footer .see-also h3 {
+        margin: 3.2rem 0; }
   .content .post .post-title {
     margin-bottom: .75em; }
   .content .post .post-meta i {
