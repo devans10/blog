@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Dave Evans">
+    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="keywords" content="blog,devops,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Packer"/>
+<meta name="twitter:description" content="Packer So, what is packer? From the packer.io website:
+ Packer is an open source tool for creating identical machine images for multiple platforms from a single source configuration. Packer is lightweight, runs on every major operating system, and is highly performant, creating machine images for multiple platforms in parallel. Packer does not replace configuration management like Chef or Puppet. In fact, when building images, Packer is able to use tools like Chef or Puppet to install software onto the image."/>
+
+    <meta property="og:title" content="Packer" />
+<meta property="og:description" content="Packer So, what is packer? From the packer.io website:
+ Packer is an open source tool for creating identical machine images for multiple platforms from a single source configuration. Packer is lightweight, runs on every major operating system, and is highly performant, creating machine images for multiple platforms in parallel. Packer does not replace configuration management like Chef or Puppet. In fact, when building images, Packer is able to use tools like Chef or Puppet to install software onto the image." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.daveevans.us/posts/packer/" />
+<meta property="article:published_time" content="2019-11-02T10:24:24-04:00" />
+<meta property="article:modified_time" content="2019-11-02T10:24:24-04:00" />
+
+
+    
+      <base href="https://www.daveevans.us/posts/packer/">
+    
+    <title>
+  Packer · Dave Evans
+</title>
+
+    
+      <link rel="canonical" href="https://www.daveevans.us/posts/packer/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.74.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.daveevans.us/">
+      Dave Evans
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Packer</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2019-11-02T10:24:24-04:00'>
+                November 2, 2019
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4 minutes read
+            </span>
+          </div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        <h2 id="packer">Packer</h2>
+<p>So, what is packer? From the <a href="https://www.packer.io/intro/index.html">packer.io</a> website:</p>
+<blockquote>
+<p>Packer is an open source tool for creating identical machine images for multiple platforms from a single source configuration. Packer is lightweight, runs on every major operating system, and is highly performant, creating machine images for multiple platforms in parallel. Packer does not replace configuration management like Chef or Puppet. In fact, when building images, Packer is able to use tools like Chef or Puppet to install software onto the image.</p>
+</blockquote>
+<p>We have been building VMs from image templates for quite a while now, but as a team we were never good at documenting, or updating the documentation, for those template creations.  It was something we did very infrequently, and quite honestly isn&rsquo;t that hard.  I believe that is one of the stumbling blocks to getting started with IaC in an infrastructure organization, none of these tasks are hard for system administrators, but the sum of these tasks take time. So if we can automate the whole process end to end, we can speed up the whole process for the developers or application teams.  So image creation is that first building block that needs to be tackled.</p>
+<p>My goal with Packer isn&rsquo;t to pre-bake a complete system, at this time, but to create the base operating system images that will be provisioned by Terraform and configured by Ansible.  As an organization, we aren&rsquo;t quite ready to have fully baked images that just get replaced on deployment in our primary environments, but some of the intention here is to give access to the developers and application teams to contribute configuration code to the servers.  In order to do that, we do need to provide them a place to test those configurations, and have consistent initial build images for them to start from.</p>
+<p>Initially, I am not going to put the image creation in the project pipeline.  Eventually, I plan to run the packer builds through their own pipeline and upload the images to an object store, but for this first part I need to execute it locally on my machine since I&rsquo;m coming at this from scratch.  I&rsquo;m not going to go through how to install packer, but you can find the instructions <a href="https://www.packer.io/intro/getting-started/install.html">here</a></p>
+<p>To start building images with packer, we first need to create a template.  I&rsquo;m going to build a centos 7 image, so I create a directory called  <code>os-images</code> and create a <code>centos7</code> directory and a json file called <code>centos-7-server-x86_64.json</code> with the following content.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    {
+      <span style="font-weight:bold">&#34;variables&#34;</span>: {
+         <span style="font-weight:bold">&#34;ssh_username&#34;</span>: <span style="font-style:italic">&#34;&#34;</span>,
+         <span style="font-weight:bold">&#34;ssh_password&#34;</span>: <span style="font-style:italic">&#34;&#34;</span>,
+         <span style="font-weight:bold">&#34;iso_url&#34;</span>: <span style="font-style:italic">&#34;&#34;</span>,
+         <span style="font-weight:bold">&#34;iso_checksum&#34;</span>: <span style="font-style:italic">&#34;&#34;</span>,
+         <span style="font-weight:bold">&#34;iso_checksum_type&#34;</span>: <span style="font-style:italic">&#34;&#34;</span>
+      },
+      <span style="font-weight:bold">&#34;builders&#34;</span>: [{
+         <span style="font-weight:bold">&#34;type&#34;</span>: <span style="font-style:italic">&#34;qemu&#34;</span>,
+         <span style="font-weight:bold">&#34;headless&#34;</span>: <span style="font-style:italic">&#34;true&#34;</span>,
+         <span style="font-weight:bold">&#34;iso_url&#34;</span>: <span style="font-style:italic">&#34;{{user `iso_url`}}&#34;</span>,
+         <span style="font-weight:bold">&#34;iso_checksum&#34;</span>: <span style="font-style:italic">&#34;{{user `iso_checksum`}}&#34;</span>,
+         <span style="font-weight:bold">&#34;iso_checksum_type&#34;</span>: <span style="font-style:italic">&#34;{{user `iso_checksum_type`}}&#34;</span>,
+         <span style="font-weight:bold">&#34;output_directory&#34;</span>: <span style="font-style:italic">&#34;output_centos7&#34;</span>,
+         <span style="font-weight:bold">&#34;shutdown_command&#34;</span>: <span style="font-style:italic">&#34;echo &#39;packer&#39; | sudo -S shutdown -P now&#34;</span>,
+         <span style="font-weight:bold">&#34;disk_size&#34;</span>: 10000,
+         <span style="font-weight:bold">&#34;format&#34;</span>: <span style="font-style:italic">&#34;qcow2&#34;</span>,
+         <span style="font-weight:bold">&#34;accelerator&#34;</span>: <span style="font-style:italic">&#34;kvm&#34;</span>,
+         <span style="font-weight:bold">&#34;http_directory&#34;</span>: <span style="font-style:italic">&#34;http&#34;</span>,
+         <span style="font-weight:bold">&#34;ssh_username&#34;</span>: <span style="font-style:italic">&#34;{{user `ssh_username`}}&#34;</span>,
+         <span style="font-weight:bold">&#34;ssh_password&#34;</span>: <span style="font-style:italic">&#34;{{user `ssh_password`}}&#34;</span>,
+         <span style="font-weight:bold">&#34;ssh_timeout&#34;</span>: <span style="font-style:italic">&#34;20m&#34;</span>,
+         <span style="font-weight:bold">&#34;vm_name&#34;</span>: <span style="font-style:italic">&#34;centos7&#34;</span>,
+         <span style="font-weight:bold">&#34;net_device&#34;</span>: <span style="font-style:italic">&#34;virtio-net&#34;</span>,
+         <span style="font-weight:bold">&#34;disk_interface&#34;</span>: <span style="font-style:italic">&#34;virtio&#34;</span>,
+        <span style="font-weight:bold">&#34;boot_wait&#34;</span>: <span style="font-style:italic">&#34;10s&#34;</span>,
+         <span style="font-weight:bold">&#34;boot_command&#34;</span>: [
+            <span style="font-style:italic">&#34;&lt;tab&gt; text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos7-ks.cfg&lt;enter&gt;&lt;wait&gt;&#34;</span>
+         ]
+      }]
+    }
+</code></pre></div><p>The above template has two sections, <code>variables</code> and <code>builders</code>.  The variables section defines the values that we will want to change from the command line.  The builders section contains the builder definitions.  In this example, I&rsquo;m just building a QEMU image to run on Xen, but will be adding builders for VMware, Azure, AWS, and Vagrant in the future.  That way we will have one process for creating identical images on all platforms that we run VMs on.</p>
+<p>Next, we need to create the kickstart file that will be used to build the image.  This file will be in a <code>http</code> directory specified by the <code>http_directory</code> parameter in the json file.  The files in this directory will be served to the installer via http server created by packer.
+The <code>ks.cfg</code> file will contain:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">install
+url --url <span style="font-weight:bold;font-style:italic">${</span>installation_url<span style="font-weight:bold;font-style:italic">}</span>
+%{ <span style="font-weight:bold">for</span> repo in repos ~}
+repo --name <span style="font-weight:bold;font-style:italic">${</span>repo_name<span style="font-weight:bold;font-style:italic">}</span> --baseurl=<span style="font-weight:bold;font-style:italic">${</span>repo_url<span style="font-weight:bold;font-style:italic">}</span>
+%{ endfor ~}
+
+<span style="font-style:italic"># System authorization information</span>
+auth --enableshadow --passalgo=sha512
+
+text
+
+ignoredisk --only-use=vda
+<span style="font-style:italic"># Keyboard layouts</span>
+keyboard --vckeymap=us --xlayouts=<span style="font-style:italic">&#39;us&#39;</span>
+<span style="font-style:italic"># System language</span>
+lang en_US.UTF-8
+
+<span style="font-style:italic"># Root password</span>
+rootpw <span style="font-weight:bold;font-style:italic">${</span>rootpw<span style="font-weight:bold;font-style:italic">}</span>
+<span style="font-style:italic"># System services</span>
+services --enabled=<span style="font-style:italic">&#34;chronyd&#34;</span>
+<span style="font-style:italic"># System timezone</span>
+timezone America/New_York --isUtc
+<span style="font-style:italic"># System bootloader configuration</span>
+bootloader --append=<span style="font-style:italic">&#34; crashkernel=auto&#34;</span> --location=mbr --boot-drive=vda
+autopart --type=lvm
+<span style="font-style:italic"># Partition clearing information</span>
+clearpart --none --initlabel
+
+reboot
+
+%packages
+@^minimal
+@core
+chrony
+kexec-tools
+
+%end
+
+%addon com_redhat_kdump --enable --reserve-mb=<span style="font-style:italic">&#39;auto&#39;</span>
+
+%end
+
+%anaconda
+pwpolicy root --minlen=6 --minquality=1 --notstrict --nochanges --notempty
+pwpolicy user --minlen=6 --minquality=1 --notstrict --nochanges --emptyok
+pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
+%end
+</code></pre></div><p>Now that we have our template, we will create the a <code>local_file</code> resource in the <code>main.tf</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="font-style:italic">##### packer-image/main.tf #####</span>
+
+<span style="font-style:italic"># kickstart file</span> 
+resource <span style="font-style:italic">&#34;local_file&#34;</span> <span style="font-style:italic">&#34;kickstart&#34;</span> {
+    content = templatefile(ks.tmpl, { rootpw})
+}
+</code></pre></div>
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "www-daveevans-us" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+     © 2020
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-124360075-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+
+</html>

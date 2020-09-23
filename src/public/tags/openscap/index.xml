@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openscap on Dave Evans</title>
+    <link>https://www.daveevans.us/tags/openscap/</link>
+    <description>Recent content in openscap on Dave Evans</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.daveevans.us/tags/openscap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using OpenSCAP for Security Patch Validation</title>
+      <link>https://www.daveevans.us/posts/using-openscap-for-security-patch-validation/</link>
+      <pubDate>Mon, 20 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/using-openscap-for-security-patch-validation/</guid>
+      <description>I have been looking for a way to validate patches in my environment. This validation need to occur outside of the patch repository, because what if the repository is incomplete. This may seem like overkill (and it probably is), but the validation was really more about creating verifiable evidence that patching had occurred and everything was applied.
+My environment consists completely of Red Hat and Red Hat derivative distributions, so most of this will apply to those, but some may be applicable to other distributions as well.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Dave Evans">
+    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="keywords" content="blog,devops,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Moving from Dropbox to Nextcloud"/>
+<meta name="twitter:description" content="Last week I got a notification on my desktop that as of November 7, 2018 Dropbox will stop syncing files to my computer. They are making a change to only support the “most popular filesystems”, and on Linux that means only unencrypted ext4. Unfortunately, I use XFS on all of my machines, and I don&rsquo;t feel like duct taping solution together. Besides, I have been looking for a reason to move off of Dropbox, and this just gave me the push to move forward."/>
+
+    <meta property="og:title" content="Moving from Dropbox to Nextcloud" />
+<meta property="og:description" content="Last week I got a notification on my desktop that as of November 7, 2018 Dropbox will stop syncing files to my computer. They are making a change to only support the “most popular filesystems”, and on Linux that means only unencrypted ext4. Unfortunately, I use XFS on all of my machines, and I don&rsquo;t feel like duct taping solution together. Besides, I have been looking for a reason to move off of Dropbox, and this just gave me the push to move forward." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.daveevans.us/posts/moving-from-dropbox-to-nextcloud/" />
+<meta property="article:published_time" content="2018-08-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-08-19T00:00:00+00:00" />
+
+
+    
+      <base href="https://www.daveevans.us/posts/moving-from-dropbox-to-nextcloud/">
+    
+    <title>
+  Moving from Dropbox to Nextcloud · Dave Evans
+</title>
+
+    
+      <link rel="canonical" href="https://www.daveevans.us/posts/moving-from-dropbox-to-nextcloud/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.74.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.daveevans.us/">
+      Dave Evans
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Moving from Dropbox to Nextcloud</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2018-08-19T00:00:00Z'>
+                August 19, 2018
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              7 minutes read
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.daveevans.us/tags/nextcloud/">nextcloud</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        <p>Last week I got a notification on my desktop that as of November 7, 2018 Dropbox will stop syncing files to my computer.  They are making a change to only support the “most popular filesystems”, and on Linux that means only unencrypted ext4.  Unfortunately, I use XFS on all of my machines, and I don&rsquo;t feel like duct taping solution together.  Besides, I have been looking for a reason to move off of Dropbox, and this just gave  me the push to move forward.</p>
+<p>I’m not a huge Dropbox user, but it does serve a purpose for me.  I use it to sync some files between my phone and computers, and I will do the occasional sharing of files via links.  In addition, I have been looking for a good solution to sync photos from my wife&rsquo;s phone to a central location, since she will <em>never</em> do it herself.</p>
+<p>So, it&rsquo;s time to look at NextCloud again and in a more serious manner.  I have played around with OwnCloud/NextCloud in the past.  Mainly just on my local LAN, running off of my FreeNAS.  However, now I’m going to want to have a setup that is available all the time, and that can be a Dropbox replacement, which means available over the internet.</p>
+<h2 id="the-plan">The Plan</h2>
+<p>My plan is to install NextCloud on a Digital Ocean droplet, and attach 100GB of Block Storage for the data.  I’m also going to need a DNS domain.  I have had some in the past, but have let them all expire, as I was never really happy with what I ended up with.  Lucky for me, a quick look on Google Domains shows that daveevans.us is available (as you know, since you&rsquo;re here).  It is not easy to find a “normal” top level domain with a common name such as mine.  I think I finally found a domain that I will stick with for awhile. (Hence, restarting my blog.)</p>
+<hr>
+<p>I start by creating a 1 CPU, 1GB RAM, 25GB SSD Droplet on Digial Ocean with Ubuntu 18.04, attach my SSH key, create a 100GB Block Storage volume, and I’m off and away.</p>
+<p>Now that I have my machine, I do some quick hardening.</p>
+<ul>
+<li>Install fail2ban</li>
+<li>Setup my firewall</li>
+<li>Create an unpriviledged user and copy my SSH Key</li>
+<li>Remove root login via SSH</li>
+<li>Allow SSH login by only my unpriviledged user</li>
+</ul>
+<p>Next, I look at the <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-nextcloud-on-ubuntu-18-04">NextCloud installation guide</a> from Digital Ocean. They have a snap package, which should make things very easy.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">snap install nextcloud
+sudo nextcloud.manual-install &lt;username&gt; &lt;password&gt;
+sudo nextcloud.occ config:system:set trusted_domains 1 --value=example.com
+sudo ufw allow 80,443/tcp
+sudo nextcloud.enable-https lets-encrypt
+</code></pre></div><p>That was easy, except…</p>
+<p>I go to login to the NextCloud web console, and my password does not work.  So I find out how to change a lost admin password.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nextcloud.occ user:resetpassword &lt;username&gt;
+</code></pre></div><p>Alright, now I can login.</p>
+<p>Next, I want to move the data directory to the Block Storage that I setup.  I create a logical volume with the block storage and mount it at /data.</p>
+<p>For this move, I have to change the ‘datadirectory’ parameter in the /var/snap/nextcloud/current/nextcloud/config/config.php file to point to /data. Then, stop the applicaton, move the data, and restart.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo snap disable nextcloud
+sudo mv /var/snap/nextcloud/common/nextcloud/data /data
+sudo snap enable nextcloud
+</code></pre></div><p>&hellip;and everything breaks.</p>
+<p>It turns out that NextCloud installed via snap package, cannot access any directories outside the snap.  This actually makes sense, since snaps are sandboxed applications.  Maybe there is a way to allow this, but I’m still pretty new to snaps and don’t feel like researching it right now.  I give a quick try to outsmart technology, and mount my data disk at /var/snap/nextcloud/common/nextcloud/data. That fixes nothing.  Its back to the drawing board.</p>
+<hr>
+<p>So, the manual install it is…</p>
+<p>I followed the <a href="https://docs.nextcloud.com/server/13/admin_manual/installation/source_installation.html">NextCloud Installation Guide</a> for this install. It was pretty straight forward, but did have a couple different options to pick from.</p>
+<p>I chose to use php7.2, mariadb, and apache, since those are what I’m most familiar with.  There is a long list of php prerequisites that are listed in the Install Guide, but a lot of them actually get installed with some of the higher level packages.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install apache2 mariadb-server libapache2-mod-php7.2
+apt-get install php7.2-gd php7.2-json php7.2-mysql php7.2-curl php7.2-mbstring
+apt-get install php7.2-intl php7.2-mcrypt php-imagick php7.2-xml php7.2-zip
+</code></pre></div><p>Next, run the mysql secure install script.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mysql_secure_installation
+</code></pre></div><p>There are some settings that need to be changed in the php.ini</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /etc/php/7.2/apache2/php.ini
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">file_uploads = On
+allow_url_fopen = On
+memory_limit = 256M
+upload_max_filesize = 100M
+display_errors = Off
+date.timezone = America/New_York
+</code></pre></div><p>Now, I can create the nextcloud database.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mysql -u root -p
+CREATE DATABASE nextcloud;
+CREATE USER <span style="font-style:italic">&#39;nextcloud&#39;</span>@<span style="font-style:italic">&#39;localhost&#39;</span> IDENTIFIED BY <span style="font-style:italic">&#39;&lt;password&gt;&#39;</span>;
+GRANT ALL ON nextcloud.* TO <span style="font-style:italic">&#39;nextcloud&#39;</span>@<span style="font-style:italic">&#39;localhost&#39;</span> IDENTIFIED BY <span style="font-style:italic">&#39;&lt;password&gt;&#39;</span> WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+EXIT;
+</code></pre></div><p>Create an apache website configuration file.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /etc/apache2/sites-available/nextcloud.conf
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Alias / &#34;/var/www/nextcloud/&#34;
+
+&lt;Directory /var/www/nextcloud/&gt;
+  Options +FollowSymlinks
+  AllowOverride All
+
+ &lt;IfModule mod_dav.c&gt;
+  Dav off
+ &lt;/IfModule&gt;
+
+ SetEnv HOME /var/www/nextcloud
+ SetEnv HTTP_HOME /var/www/nextcloud
+
+&lt;/Directory&gt;
+</code></pre></div><p>And, create a soft link to it in the sites-enabled directory. Then enable some Apache modules, and restart apache.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ln -s /etc/apache2/sites-available/nextcloud.conf /etc/apache2/sites-enabled//nextcloud.conf
+a2enmod rewrite
+a2enmod env
+a2enmod dir
+a2enmod mime
+a2enmod setenvif
+systemctl restart apache2
+</code></pre></div><p>Now we have to download the nextcloud ZIP file.  At this time 13.0.5 is the latest release.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /var/www
+wget https://download.nextcloud.com/server/releases/nextcloud-13.0.5.zip
+unzip nextcloud-13.0.5.zip
+
+systemctl restart apache2
+</code></pre></div><p>That was pretty painless.</p>
+<p>Next, I login to the Web Console for the setup wizard.  Here I enter my username/password, and I’m able to specify my data storage directory as /data.  Then enter the database details, and the setup completes. Everything is working again, and I’m able to see the 100GB of storage</p>
+<h2 id="data-migration-from-dropbox">Data Migration From Dropbox</h2>
+<p>Moving off of Dropbox is the easy part.  As I said, I’m not a big Dropbox user, and have less than 1GB of data stored there.</p>
+<p>I install the NextCloud Client using the snap package.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo snap install nextcloud-client
+</code></pre></div><p>I start the client application and login to my instance.  The dialogue box give me an option to login with an app password.  In the web console, under my user settings → security, there is an option to create an App Password.  I do this and copy the app password into the dialogue box.  I’m able to specify a new folder to sync NextCloud to, so I create NextCloud under my home directory.  The default location was in the snap location, so I wasn’t sure if this was going to work because of the issue I had on the server.  I got no errors, and everything seems to be working fine.</p>
+<p>I then copy the files from my Dropbox folder to NextCloud and everything syncs as I expect.</p>
+<h2 id="move-pictures-from-icloud">Move Pictures from iCloud</h2>
+<p>For years now, My wife and I have uploaded pictures from our iPhones to iCloud.  I have just under 5000 photos, my wife has about 10,000.  I’m going to test out on just myself first.</p>
+<p>As a side note, we have been sending pictures to iCloud, but I also keep a local backup copy on my FreeNAS server. Which I painstakingly sync from iCloud every couple months.  I’m hoping with the NextCloud setup I can sync to my FreeNAS with this setup. But that is for a future post.</p>
+<p>I already had the NextCloud App on my iPhone. I try to login to my new instance using an App Password like I did on my desktop, but it just sits there and spins. So I change to login with my user ID, which I’ll probably regret later.</p>
+<p>The app has a setting to copy my whole Photo Library and organize them into folders by year and month.  I turn it on and it starts sending ~5000 photos to NextCloud.</p>
+<p>I quickly figure out that even though I flip the switch to allow the application to run in the backgroup, photos do not upload if the app is not in the foreground.  Luckily, by this time, I’m just about ready to call it a night. So I set my phone to Never Lock, and let it run over night.</p>
+<p>By morning the sync is finished.  I’m going to let this run for a couple weeks before I attempt my wife’s phone.</p>
+<h3 id="update">UPDATE</h3>
+<p>Not everything actually synced over.  Most of it did, but I do have about 800 images that didn&rsquo;t make it.  I will probably do a follow-up post just on data migration.</p>
+<p><a href="https://www.daveevans.us/posts/migration-to-nextcloud-part-2/">Next post on my cloud migration</a></p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "www-daveevans-us" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+     © 2020
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-124360075-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+
+</html>

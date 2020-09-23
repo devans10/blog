@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Dave Evans">
+    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="keywords" content="blog,devops,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setting up a Python Project"/>
+<meta name="twitter:description" content="I have been writing Python code for probably close to 10 years. The crazy part about this is that I am completely self-taught in Python didn&rsquo;t know any &ldquo;right&rdquo; way to do things. Basically, as a Systems Administrator, I was writing shell scripts, and as I came upon problems that required some more advanced features, I would switch to writing in Python. More specifically, as I needed to interact with both WebLogic and WebSphere, I had to write code using the Python/Jython libraries that shipped with those products."/>
+
+    <meta property="og:title" content="Setting up a Python Project" />
+<meta property="og:description" content="I have been writing Python code for probably close to 10 years. The crazy part about this is that I am completely self-taught in Python didn&rsquo;t know any &ldquo;right&rdquo; way to do things. Basically, as a Systems Administrator, I was writing shell scripts, and as I came upon problems that required some more advanced features, I would switch to writing in Python. More specifically, as I needed to interact with both WebLogic and WebSphere, I had to write code using the Python/Jython libraries that shipped with those products." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.daveevans.us/posts/setting-up-a-python-project/" />
+<meta property="article:published_time" content="2018-09-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-09-13T00:00:00+00:00" />
+
+
+    
+      <base href="https://www.daveevans.us/posts/setting-up-a-python-project/">
+    
+    <title>
+  Setting up a Python Project · Dave Evans
+</title>
+
+    
+      <link rel="canonical" href="https://www.daveevans.us/posts/setting-up-a-python-project/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.74.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.daveevans.us/">
+      Dave Evans
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Setting up a Python Project</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2018-09-13T00:00:00Z'>
+                September 13, 2018
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4 minutes read
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.daveevans.us/tags/python/">python</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        <p>I have been writing Python code for probably close to 10 years.  The crazy part about this is that I am completely self-taught in Python didn&rsquo;t know any &ldquo;right&rdquo; way to do things.  Basically, as a Systems Administrator, I was writing shell scripts, and as I came upon problems that required some more advanced features, I would switch to writing in Python.  More specifically, as I needed to interact with both WebLogic and WebSphere, I had to write code using the Python/Jython libraries that shipped with those products.</p>
+<p>Anyway, I was writing these more like Bash scripts then proper Python programming.  So, last week I was on vacation, and decided to take a Python  3 class on <a href="https://linuxacademy.com">Linux Academy</a>.  The first 2/3rds of the class I pretty much breezed through, as it was mainly review. The last part of the class was dedicated to properly setting up a project to write code using Test Driven Development.  Needless to say, I thought this was just the bee&rsquo;s knees.  Being basically self-taught, I never really knew what the proper way (yes, I know there are probably many &ldquo;proper&rdquo; ways) to set things up.  In addition, it also answered many questions I had about how to setup testing in code(&ldquo;Hi, I am Dave, and I am <em>NOT</em> a developer&rdquo;).</p>
+<p>I&rsquo;m currently working on a project to build a benchmark test for a new NAS unit.  I want this benchmark process to mirror an important workflow we have for our NAS mount points. So it seemed like a great project to setup with this system.</p>
+<p>I&rsquo;m not going to do a ton of explanation on the steps below.  Mainly, this is just going to be a wiki (mainly for me) on what to run for each step to build a skeleton of a basic Python project.</p>
+<h3 id="installing-python">Installing Python</h3>
+<h6 id="on-centos-7">On CentOS 7</h6>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo su -
+$ yum groupinstall -y <span style="font-style:italic">&#34;development tools&#34;</span>
+$ yum install -y <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libffi-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  zlib-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  bzip2-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  openssl-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  ncurses-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  sqlite-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  readline-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  tk-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  gdbm-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  db4-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libpcap-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  xz-devel <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  expat-devel
+
+$ cd /usr/src
+$ wget http://python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz
+$ tar xf Python-3.7.0.tar.xz
+$ cd Python-3.7.0
+$ ./configure --enable-optimizations
+$ make altinstall
+$ exit
+</code></pre></div><p>Add <code>/usr/local/bin</code> to the<code>secure_path</code> in the sudoers file</p>
+<p>Update <code>pip</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pip3.7 install --upgrade pip
+</code></pre></div><h6 id="on-ubuntu-1804">On Ubuntu 18.04</h6>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo su -
+$ apt update -y
+$ apt install -y <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  wget <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  build-essential <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libssl-dev <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  zlib1g-dev <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libbz2-dev <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libreadline-dev <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libsqlite3-dev <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libncurses5-dev <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libncursesw5-dev <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  xz-utils <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  libffi-dev <span style="font-weight:bold;font-style:italic">\
+</span><span style="font-weight:bold;font-style:italic"></span>  tk-dev
+
+$ cd /usr/src
+$ wget http://python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz
+$ tar xf Python-3.7.0.tar.xz
+$ cd Python-3.7.0.tar.xz
+$ ./configure --enable-optimizations
+$ make altinstall
+$ exit
+</code></pre></div><p>Update <code>pip</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pip3.7 install --upgrade pip
+</code></pre></div><h3 id="setup-virtualenv">Setup virtualenv</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip3.7 install pipenv
+$ mkdir nasbenchmark &amp;&amp; cd nasbenchmark
+$ pipenv install <span style="font-weight:bold">$(</span>which python3.7<span style="font-weight:bold">)</span>
+$ git init
+$ curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore -o .gitignore
+$ pipenv shell
+</code></pre></div><h3 id="create-readme">Create README</h3>
+<p>Create a README.rst file for the project.  A skeleton file is below.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">project name
+========
+
+A Project Description
+
+Preparing for Development
+-------------------------
+
+1. Ensure ``pip`` and ``pipenv`` are installed
+2. Clone repository: ``git clone git@gitlab.com:example/projectname``
+3. ``cd`` into repository
+4. Fetch development dependencies ``make install``
+5. Activate virtualenv: ``pipenv shell``
+
+Usage
+-----
+
+Example:
+
+::
+
+    $ example run code
+
+Running Tests
+-------------
+
+Run tests locally using ``make`` if virtualenv is active:
+
+::
+
+    $ make
+
+If virtualenv isn’t active then use:
+
+::
+
+    $ pipenv run make
+</code></pre></div><h3 id="create-makefile-and-setuppy">Create Makefile and setup.py</h3>
+<p>setup.py:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">from setuptools import setup, find_packages
+
+with open(&#39;README.rst&#39;, encoding=&#39;UTF-8&#39;) as f:
+    readme = f.read()
+
+setup(
+    name=&#39;projname&#39;,
+    version=&#39;0.1.0&#39;,
+    description=&#39;Description&#39;,
+    long_description=readme,
+    author=&#39;Dave Evans&#39;,
+    author_email=&#39;dave@example.com&#39;,
+    packages=find_packages(&#39;src&#39;),
+    package_dir={&#39;&#39;: &#39;src&#39;},
+    install_requires=[],
+    entry_points={
+        &#39;console_scripts&#39;: [
+            &#39;projname=projname.somepackage:main&#39;,
+        ],
+    }
+)
+</code></pre></div><p>Makefile:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">.PHONY: default install test
+
+default: test
+
+install:
+    pipenv install --dev --skip-lock
+
+test:
+    PYTHONPATH=./src pytest
+</code></pre></div><p>Note: the spaces in front of the pipenv and PYTHONPATH have to be <code>tabs</code></p>
+<h3 id="setup-pytest">Setup pytest</h3>
+<p>Install pytest into virtualenv</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ pipenv install --dev pytest
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ mkdir -p src/projname tests
+$ touch src/projname/__init__.py tests/.keep
+</code></pre></div><p>Packages should go in <code>src/projname</code>
+Tests should go in <code>tests/test_testname.py</code></p>
+<p>Thats it. You should now have a basic shell of a project that you can do test driven development in.  I can&rsquo;t take any credit for this.  For a much deeper dive into this, please sign up for <a href="https://linuxacademy.com">Linux Academy</a> training.  It is well worth it. They have <em>TONS</em> of content for both beginners and experienced Linux users.</p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "www-daveevans-us" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+     © 2020
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-124360075-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+
+</html>

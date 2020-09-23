@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on Dave Evans</title>
+    <link>https://www.daveevans.us/tags/tools/</link>
+    <description>Recent content in tools on Dave Evans</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.daveevans.us/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My New Favorite Tool... ncdu</title>
+      <link>https://www.daveevans.us/posts/my-new-favorite-tool-ncdu/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/my-new-favorite-tool-ncdu/</guid>
+      <description>So today I found my new favorite command line tool, ncdu. This is a ncurses disk utilization tool that is great for finding what is filling up your file systems. Especially on servers that do not have a graphical interface.
+If you are like me, when I get file system alerts, it was an endless string of &amp;lsquo;du -h &amp;ndash;max-depth=1&amp;rsquo; commands. I would have to re-run that command as I drilled down through the directory structure.</description>
+    </item>
+    
+  </channel>
+</rss>
