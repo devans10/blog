@@ -1,28 +1,28 @@
-locals {
-  dockercfg = {
-    "${var.docker_server}" = {
-      email    = "${var.docker_email}"
-      username = "${var.docker_username}"
-      password = "${var.docker_password}"
-    }
-  }
-}
+#locals {
+#  dockercfg = {
+#    "${var.docker_server}" = {
+#      email    = var.docker_email
+#      username = var.docker_username
+#      password = var.docker_password
+#    }
+#  }
+#}
 resource "kubernetes_secret" "regsecret" {
   metadata {
     name = "regsecret"
   }
 
-  data {
-    ".dockercfg" = "${ jsonencode(local.dockercfg) }"
+  data = {
+    ".dockerconfigjson" = "${file("~/.docker/config.json")}"
   }
 
-  type = "kubernetes.io/dockercfg"
+  type = "kubernetes.io/dockerconfigjson"
 }
 
 resource "kubernetes_deployment" "blog" {
   metadata {
     name = "blog"
-    labels {
+    labels = {
       app = "blog"
     }
   }
@@ -31,14 +31,14 @@ resource "kubernetes_deployment" "blog" {
     replicas = 2
 
     selector {
-      match_labels {
+      match_labels = {
         app = "blog"
       }
     }
 
     template {
       metadata {
-        labels {
+        labels = {
           app = "blog"
         }
       }
@@ -46,14 +46,14 @@ resource "kubernetes_deployment" "blog" {
       spec {
         container {
            name = "blog"
-           image = "${var.image}"
+           image = var.image
            image_pull_policy = "Always"
            port {
              container_port = "80"
            }
          }
          image_pull_secrets {
-           name = "${kubernetes_secret.regsecret.metadata.0.name}"
+           name = kubernetes_secret.regsecret.metadata.0.name
          }
        }
      }
@@ -66,8 +66,8 @@ resource "kubernetes_service" "blog" {
     name = "blog"
   }
   spec {
-    selector {
-      app = "${kubernetes_deployment.blog.metadata.0.labels.app}"
+    selector = {
+      app = kubernetes_deployment.blog.metadata.0.labels.app
     }
     port {
       port = 80
