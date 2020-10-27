@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>purestorage on Dave Evans</title>
+    <link>https://www.daveevans.us/tags/purestorage/</link>
+    <description>Recent content in purestorage on Dave Evans</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 03 Jun 2019 20:55:47 -0400</lastBuildDate>
+    
+	<atom:link href="https://www.daveevans.us/tags/purestorage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pure Storage Guest Blog</title>
+      <link>https://www.daveevans.us/posts/pure-storage-guestblog/</link>
+      <pubDate>Mon, 03 Jun 2019 20:55:47 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/pure-storage-guestblog/</guid>
+      <description>This blog was originally posted on the Pure Storage Blog
+For the last couple months, I have been working on some side projects to work with Pure Storage. These projects gave me the opportunity to learn golang and learn more about code development, testing, and even some continuous integration. The links to these projects are on my github, and on the Projects page of this site.
+I began to take a look at Terraform to use within our environment for infrastructure deployments.</description>
+    </item>
+    
+    <item>
+      <title>Terraform Provider for PureStorage FlashArray</title>
+      <link>https://www.daveevans.us/posts/terraform-provider-for-purestorage-flasharray/</link>
+      <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/terraform-provider-for-purestorage-flasharray/</guid>
+      <description>About a month and a half ago, I began to take a look at Terraform to use within our environment for infrastructure deployments. The goal was twofold. First, have a way to perform scripted, template style deployments using an Infrastructure-as-code philosophy. Second, to be able to use the same tool across multiple platforms both on-prem (VMWare, OracleVM, and FlashStack) and in the cloud (AWS and Azure).
+What is Terraform? From the terraform.</description>
+    </item>
+    
+  </channel>
+</rss>

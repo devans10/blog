@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Dave Evans">
+    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="keywords" content="blog,devops,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Migrating Nextcloud to Kubernetes"/>
+<meta name="twitter:description" content="Process for moving a Nextcloud instance from a VM to Kubernetes"/>
+
+    <meta property="og:title" content="Migrating Nextcloud to Kubernetes" />
+<meta property="og:description" content="Process for moving a Nextcloud instance from a VM to Kubernetes" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/" />
+<meta property="article:published_time" content="2019-06-29T21:15:41-04:00" />
+<meta property="article:modified_time" content="2019-06-29T21:15:41-04:00" />
+
+
+    
+      <base href="https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/">
+    
+    <title>
+  Migrating Nextcloud to Kubernetes · Dave Evans
+</title>
+
+    
+      <link rel="canonical" href="https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.74.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.daveevans.us/">
+      Dave Evans
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Migrating Nextcloud to Kubernetes</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2019-06-29T21:15:41-04:00'>
+                June 29, 2019
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4 minutes read
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.daveevans.us/tags/nextcloud/">nextcloud</a>
+      <span class="separator">•</span>
+    <a href="https://www.daveevans.us/tags/kubernetes/">kubernetes</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        <p>A little under a year ago I decided to <a href="https://www.daveevans.us/posts/moving-from-dropbox-to-nextcloud/">migrate from Dropbox to Nextcloud</a> and I couldn&rsquo;t be happier with the results.  It has been a very painless experience.  I have upgraded multiple times without issue. Automatic photo sync from my phone works flawlessly, and I have begun to do much more with it than I ever did with Dropbox.</p>
+<p>I have only had one hiccup with the install, and quite honestly it was my fault.  Every year I put together and end-of-year video together for my wife&rsquo;s Kindergarten class.  This year we wanted to be able to distribute the video to the parents, but we didn&rsquo;t want to publish it on YouTube.  We created cards with a QR code that pointed to the share link from my Nextcloud instance, except I accidently gave them a link to play the video instead of just download it. So later that day when 50+ people started streaming the video from my Nextcloud instance, it got overloaded and crashed.  Essentially what happened was the OOM killer, killed off the database.</p>
+<p>This incident got me thinking.  What if I look to run my Nextcloud on my Kubernetes instance.  That way if some part of it goes down, Kubernetes would be able to restart it.  In addition, I may be able to save a bit of money, too.  I just have a couple static web sites running on the cluster, and there should be plenty of compute left to also run Nextcloud.</p>
+<h2 id="the-plan">The Plan</h2>
+<p>First things first, I need to find out if running Nextcloud on Kubernetes is possible.  A quick search found that there are <a href="https://github.com/helm/charts/tree/master/stable/nextcloud">Helm charts available for Nextcloud.</a> The charts include dependancies for separate MySql database and redis pods.  This is a benefit since those could allow those pieces to run on separate compute nodes. In addtion, this chart does include setting up persistent storage for both the Nextcloud data directory and the MySql database.</p>
+<p>The Nextcloud documenation has a section on <a href="https://docs.nextcloud.com/server/16/admin_manual/maintenance/migrating.html">migrating to a new server.</a> This isn&rsquo;t &ldquo;exactly&rdquo; what I&rsquo;m doing, but this process can be adapted.  The basic steps are:</p>
+<ul>
+<li>Setup the new instance via the Helm chart</li>
+<li>Put current Nextcloud instance into maintenace mode</li>
+<li>Backup folders and DB</li>
+<li>Restore backups on new instance</li>
+<li>Test new instance</li>
+<li>Turn off the old and on the new instance</li>
+</ul>
+<p>The good thing with this process is the old instance is not affected.  So if anything does go wrong, I can always just turn the original instance back on.</p>
+<h2 id="challenges">Challenges</h2>
+<p>There were a couple things that needed to be considered before I went ahead with this project.  First, is how to expand the data storage for the Nextcloud instance.  I had already expanded the block volume for my current instance twice, and I imagine it will continue to grow.  I was happy to find out that as of Kubernetes 1.11, expanding persistent volume claims was supported on most of the cloud providers.  Digital Ocean was not listed specifically in the article I read; however, the article was from before Digital Ocean had their hosted Kubernetes service.  This will need to be tested before I start moving data.</p>
+<p>Second, was a question about how to backup my current data and move it to the kubernetes instance.  I don&rsquo;t have enough extra storage available on my current Nextcloud droplet to tar up the data directory.  I could add another block disk, copy the data there, then scp it back to my laptop, but that would be pretty slow download and subsequent upload.  A bit of searching found the <a href="https://rclone.org/">rclone project.</a>  This program allows you to sync a directory to s3 compatible object storage. This will work to Digital Ocean Spaces, then I can download it directly to the container using the same tool.</p>
+<h2 id="a-project-for-another-day">A Project for Another Day</h2>
+<p>Well, this project ended before it began.  While I was testing the storage resize challenge listed above, I found that this is not yet possible on Digital Ocean.  They have a GitHub <a href="https://github.com/digitalocean/csi-digitalocean/issues/106">issue</a> open for it, and are waiting for an external resizer to be implemented within Kubernetes.</p>
+<p>I had started writing this post, and instead of scrapping it entirely, I&rsquo;m still going to post it.  First because sometimes its important to show what doesn&rsquo;t work, and because I will most likely update it when the feature is available.  This is also a reminder to me to make sure to test things before I jump in. I will note that this is possible on GKE or AKS, but I&rsquo;m not going to stand up another cluster just for this.</p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "www-daveevans-us" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+     © 2020
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-124360075-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+
+</html>

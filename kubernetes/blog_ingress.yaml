@@ -10,6 +10,7 @@ spec:
   - hosts:
     - www.daveevans.us
     - www.terraform-provider-flash.com
+    - www.footprintsblog.com
     secretName: letsencrypt-prod
   rules:
   - host: www.daveevans.us
@@ -23,4 +24,10 @@ spec:
       paths:
       - backend:
           serviceName: terraform-provider-flash-website
+          servicePort: 80
+  - host: www.footprintsblog.com
+    http:
+      paths:
+      - backend:
+          serviceName: footprintsblog
           servicePort: 80

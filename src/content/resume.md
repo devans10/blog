@@ -13,8 +13,12 @@ I am a well-seasoned Infrastructure Engineer with professional experience with a
 
 ### Professional Experience
 ---
-#### Duquesne Light Company						
-##### March 2015 – Present
+#### Duquesne Light Company
+##### May 2020 - Present
+##### Principal Architect
++ Responsible for developing a DevOps strategy for the IT organization
++ Develop a CI/CD architecture that can be utilized to streamline project delivery and operations						
+##### March 2015 – May 2020
 ##### Infrastructure Engineer IV
 + Administer RedHat Linux 5, 6, and 7 environment of over 425 servers
 + Developed a Cofiguration Management system using Puppet

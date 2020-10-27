@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nextcloud on Dave Evans</title>
+    <link>https://www.daveevans.us/tags/nextcloud/</link>
+    <description>Recent content in nextcloud on Dave Evans</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 29 Jun 2019 21:15:41 -0400</lastBuildDate>
+    
+	<atom:link href="https://www.daveevans.us/tags/nextcloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Migrating Nextcloud to Kubernetes</title>
+      <link>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</link>
+      <pubDate>Sat, 29 Jun 2019 21:15:41 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</guid>
+      <description>A little under a year ago I decided to migrate from Dropbox to Nextcloud and I couldn&amp;rsquo;t be happier with the results. It has been a very painless experience. I have upgraded multiple times without issue. Automatic photo sync from my phone works flawlessly, and I have begun to do much more with it than I ever did with Dropbox.
+I have only had one hiccup with the install, and quite honestly it was my fault.</description>
+    </item>
+    
+    <item>
+      <title>Using QOwnNotes with NextCloud</title>
+      <link>https://www.daveevans.us/posts/using-qownnotes-with-nextcloud/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/using-qownnotes-with-nextcloud/</guid>
+      <description>The next part of this migration is something that is a LONG time coming, replacing Evernote. However, this isn&amp;rsquo;t quite a migration. I had stopped using Evernote a few years ago, when I had switched my daily driver to Linux. Most of my data that was previously in Evernote, I had exported to folders in my Dropbox, but while I kept it, I didn&amp;rsquo;t really use it anymore.
+Most of my note taking has reverted to just text files that reside spread across my Documents directory, and I have no good way of organizing them.</description>
+    </item>
+    
+    <item>
+      <title>Migrating to NextCloud, Part 2</title>
+      <link>https://www.daveevans.us/posts/migration-to-nextcloud-part-2/</link>
+      <pubDate>Fri, 24 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/migration-to-nextcloud-part-2/</guid>
+      <description>Previous Post
+As I found out shortly after my last post about migrating to NextCloud. Not all of my data transferred successfully. However, this was not NextClouds fault. The short version is that I was allowing the NextCloud iOS client to upload my photos through my iPhone. The problem happened as the original(aka, non-optimized) photos were downloaded from iCloud then uploaded to NextCloud. As more photos came down, I ran out of space on my iPhone.</description>
+    </item>
+    
+    <item>
+      <title>Moving from Dropbox to Nextcloud</title>
+      <link>https://www.daveevans.us/posts/moving-from-dropbox-to-nextcloud/</link>
+      <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/moving-from-dropbox-to-nextcloud/</guid>
+      <description>Last week I got a notification on my desktop that as of November 7, 2018 Dropbox will stop syncing files to my computer. They are making a change to only support the “most popular filesystems”, and on Linux that means only unencrypted ext4. Unfortunately, I use XFS on all of my machines, and I don&amp;rsquo;t feel like duct taping solution together. Besides, I have been looking for a reason to move off of Dropbox, and this just gave me the push to move forward.</description>
+    </item>
+    
+  </channel>
+</rss>

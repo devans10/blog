@@ -12,3 +12,7 @@ slug = ""
 #### PuGo
 - Golang library for interacting with the Pure Storage APIs.  Currently, has packages for FlashArray and Pure1
 - [Github Repository](https://github.com/devans10/pugo)
+
+#### Terraform Provider for OVM
+- [Github Repository](https://github.com/devans10/terraform-provider-ovm)
+- [Terraform Registry](https://registry.terraform.io/providers/devans10/ovm/latest)

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>digitalocean on Dave Evans</title>
+    <link>https://www.daveevans.us/tags/digitalocean/</link>
+    <description>Recent content in digitalocean on Dave Evans</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Mar 2019 15:43:08 -0400</lastBuildDate>
+    
+	<atom:link href="https://www.daveevans.us/tags/digitalocean/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kubernetes Nginx Ingress Controller</title>
+      <link>https://www.daveevans.us/posts/kubernetes-nginx-ingress-controller/</link>
+      <pubDate>Sat, 16 Mar 2019 15:43:08 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/kubernetes-nginx-ingress-controller/</guid>
+      <description>In my previous post, I deployed my website on a Kubernetes cluster running on DigitalOcean. However, I still would like to decrease my costs as much as possible. The original setup used a Digital Ocean LoadBalancer instance as the Ingress to the Kubernetes Pods. This works great and is very easy to setup with Terraform. However, there are a couple downsides to this setup. At this time, the Kubernetes ingress objects cannot take advantage of Let&amp;rsquo;s Encrypt integration with the DigitalOcean LoadBalancer instances, and the solution will end up being a bit pricey.</description>
+    </item>
+    
+  </channel>
+</rss>
