@@ -36,44 +36,39 @@ disqusShortname = "www-daveevans-us"
     custom_css = ["css/custom.css"]
 
 [[menu.main]]
-  name = "Tech Blog"
+  name = "Tech"
   url = "/posts/"
   weight = 1
 [[menu.main]]
-  name = "Personal Blog"
+  name = "Personal"
   url = "/personal/"
-  weight = 1
+  weight = 2
 [[menu.main]]
   name = "About"
-  weight = 2
+  weight = 3
   url = "/about/"
 [[menu.main]]
   name = "Projects"
-  weight = 3
+  weight = 4
   url = "/projects/"
 
 [[params.social]]
     name = "Twitter"
-    icon = "fab fa-twitter fa-2x"
+    icon = "fa fa-twitter"
     weight = 1
     url = "https://twitter.com/dave_evans67"
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github fa-2x"
+    icon = "fa fa-github"
     weight = 2
     url = "https://github.com/devans10"
 [[params.social]]
     name = "Gitlab"
-    icon = "fab fa-gitlab fa-2x"
-    weight = 2
+    icon = "fa fa-gitlab"
+    weight = 3
     url = "https://gitlab.com/devans10/"
 [[params.social]]
-    name = "Facebook"
-    icon = "fab fa-facebook fa=2x"
-    weight = 3
-    url = "https://facebook.com/dave.evans.50115"
-[[params.social]]
     name = "LinkedIn"
-    icon = "fab fa-linkedin"
+    icon = "fa fa-linkedin"
     weight = 4
     url = "https://www.linkedin.com/in/david-evans-5a6156b4/"
