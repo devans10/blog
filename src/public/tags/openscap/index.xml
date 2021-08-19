@@ -6,11 +6,7 @@
     <description>Recent content in openscap on Dave Evans</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.daveevans.us/tags/openscap/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 20 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.daveevans.us/tags/openscap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using OpenSCAP for Security Patch Validation</title>
       <link>https://www.daveevans.us/posts/using-openscap-for-security-patch-validation/</link>

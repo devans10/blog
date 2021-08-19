@@ -59,7 +59,7 @@ Scenario There are 2 servers. Each server has 2 network interfaces that all have
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
   <body class=" ">
@@ -75,7 +75,11 @@ Scenario There are 2 servers. Each server has 2 network interfaces that all have
       
         
           <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Blog</a>
+            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
           </li>
         
           <li class="navigation-item">
@@ -140,12 +144,37 @@ Gateway: 10.1.0.1</p>
 IP: 10.2.0.100/24
 Gateway: 10.2.0.1</p>
 </blockquote>
-<p>route table:
-|Destination |Gateway   |Genmask       |Iface |
-|&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;|
-| default    | 10.1.0.1 |0.0.0.0       | eth0 |
-| 10.1.0.0   | 10.1.0.1 |255.255.255.0 | eth0 |
-| 10.2.0.0   | 10.2.0.1 |255.255.255.0 | eth1 |</p>
+<p>route table:</p>
+<table>
+<thead>
+<tr>
+<th>Destination</th>
+<th>Gateway</th>
+<th>Genmask</th>
+<th>Iface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>10.1.0.1</td>
+<td>0.0.0.0</td>
+<td>eth0</td>
+</tr>
+<tr>
+<td>10.1.0.0</td>
+<td>10.1.0.1</td>
+<td>255.255.255.0</td>
+<td>eth0</td>
+</tr>
+<tr>
+<td>10.2.0.0</td>
+<td>10.2.0.1</td>
+<td>255.255.255.0</td>
+<td>eth1</td>
+</tr>
+</tbody>
+</table>
 <h6 id="serverb">ServerB:</h6>
 <blockquote>
 <p>eth0:
@@ -157,12 +186,37 @@ Gateway: 10.1.0.1</p>
 IP: 10.4.0.100/24
 Gateway: 10.2.0.1</p>
 </blockquote>
-<p>route table:
-|Destination |Gateway   |Genmask       |Iface |
-|&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;|
-| default    | 10.3.0.1 |0.0.0.0       | eth0 |
-| 10.3.0.0   | 10.3.0.1 |255.255.255.0 | eth0 |
-| 10.4.0.0   | 10.4.0.1 |255.255.255.0 | eth1 |</p>
+<p>route table:</p>
+<table>
+<thead>
+<tr>
+<th>Destination</th>
+<th>Gateway</th>
+<th>Genmask</th>
+<th>Iface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>10.3.0.1</td>
+<td>0.0.0.0</td>
+<td>eth0</td>
+</tr>
+<tr>
+<td>10.3.0.0</td>
+<td>10.3.0.1</td>
+<td>255.255.255.0</td>
+<td>eth0</td>
+</tr>
+<tr>
+<td>10.4.0.0</td>
+<td>10.4.0.1</td>
+<td>255.255.255.0</td>
+<td>eth1</td>
+</tr>
+</tbody>
+</table>
 <h3 id="the-problem">The Problem</h3>
 <p>In this scenario, as it is currently setup, you will <em>NOT</em> be able to make a network connection from ServerA:eth1 to ServerB:eth1.</p>
 <h3 id="the-reason">The Reason</h3>
@@ -182,20 +236,80 @@ Gateway: 10.2.0.1</p>
 </code></pre></div><p>On ServerB:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip route add 10.2.0.0/24 via 10.4.0.1 dev eth1
 </code></pre></div><p>After these routes are added the new route tables on each server:</p>
-<p>ServerA:
-|Destination |Gateway   |Genmask       |Iface |
-|&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;|
-| default    | 10.1.0.1 |0.0.0.0       | eth0 |
-| 10.1.0.0   | 10.1.0.1 |255.255.255.0 | eth0 |
-| 10.2.0.0   | 10.2.0.1 |255.255.255.0 | eth1 |
-| 10.4.0.0   | 10.2.0.1 |255.255.255.0 | eth1 |</p>
-<p>ServerB:
-|Destination |Gateway   |Genmask       |Iface |
-|&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;|
-| default    | 10.3.0.1 |0.0.0.0       | eth0 |
-| 10.3.0.0   | 10.3.0.1 |255.255.255.0 | eth0 |
-| 10.4.0.0   | 10.4.0.1 |255.255.255.0 | eth1 |
-| 10.2.0.0   | 10.4.0.1 |255.255.255.0 | eth1 |</p>
+<p>ServerA:</p>
+<table>
+<thead>
+<tr>
+<th>Destination</th>
+<th>Gateway</th>
+<th>Genmask</th>
+<th>Iface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>10.1.0.1</td>
+<td>0.0.0.0</td>
+<td>eth0</td>
+</tr>
+<tr>
+<td>10.1.0.0</td>
+<td>10.1.0.1</td>
+<td>255.255.255.0</td>
+<td>eth0</td>
+</tr>
+<tr>
+<td>10.2.0.0</td>
+<td>10.2.0.1</td>
+<td>255.255.255.0</td>
+<td>eth1</td>
+</tr>
+<tr>
+<td>10.4.0.0</td>
+<td>10.2.0.1</td>
+<td>255.255.255.0</td>
+<td>eth1</td>
+</tr>
+</tbody>
+</table>
+<p>ServerB:</p>
+<table>
+<thead>
+<tr>
+<th>Destination</th>
+<th>Gateway</th>
+<th>Genmask</th>
+<th>Iface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>10.3.0.1</td>
+<td>0.0.0.0</td>
+<td>eth0</td>
+</tr>
+<tr>
+<td>10.3.0.0</td>
+<td>10.3.0.1</td>
+<td>255.255.255.0</td>
+<td>eth0</td>
+</tr>
+<tr>
+<td>10.4.0.0</td>
+<td>10.4.0.1</td>
+<td>255.255.255.0</td>
+<td>eth1</td>
+</tr>
+<tr>
+<td>10.2.0.0</td>
+<td>10.4.0.1</td>
+<td>255.255.255.0</td>
+<td>eth1</td>
+</tr>
+</tbody>
+</table>
 <p>After these changes, when doing the initial <code>ping</code> you know longer need to specify <code>-I eth1</code>, the server will use eth1 because of the decision made by its route table.  Now when ServerB is crafting the reply, it will find 10.2.0.0/24 in its route table and see it is supposed to use eth1 and send to gateway 10.4.0.1.  It will now set the <code>srcIP</code> to 10.4.0.100. When ServerA receives the reply, it will be from the correct address, and the ping will succeed.</p>
 <h4 id="adding-a-secondary-route-table">Adding a secondary route table</h4>
 <p>Another way to accomplish the same end result as above is to add a secondary route table.  With this solution, you can create rules and routes that will send reply packets back out the same interface they came in through.</p>
@@ -256,7 +370,7 @@ These files will add the rules and routes on interface startup.</p>
       <footer class="footer">
   <section class="container">
     
-     © 2020
+     © 2021
     
        · 
       Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.

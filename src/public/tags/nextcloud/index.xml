@@ -6,21 +6,7 @@
     <description>Recent content in nextcloud on Dave Evans</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Jun 2019 21:15:41 -0400</lastBuildDate>
-    
-	<atom:link href="https://www.daveevans.us/tags/nextcloud/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Migrating Nextcloud to Kubernetes</title>
-      <link>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</link>
-      <pubDate>Sat, 29 Jun 2019 21:15:41 -0400</pubDate>
-      
-      <guid>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</guid>
-      <description>A little under a year ago I decided to migrate from Dropbox to Nextcloud and I couldn&amp;rsquo;t be happier with the results. It has been a very painless experience. I have upgraded multiple times without issue. Automatic photo sync from my phone works flawlessly, and I have begun to do much more with it than I ever did with Dropbox.
-I have only had one hiccup with the install, and quite honestly it was my fault.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.daveevans.us/tags/nextcloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using QOwnNotes with NextCloud</title>
       <link>https://www.daveevans.us/posts/using-qownnotes-with-nextcloud/</link>

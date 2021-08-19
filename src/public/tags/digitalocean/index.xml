@@ -6,11 +6,7 @@
     <description>Recent content in digitalocean on Dave Evans</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Mar 2019 15:43:08 -0400</lastBuildDate>
-    
-	<atom:link href="https://www.daveevans.us/tags/digitalocean/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 16 Mar 2019 15:43:08 -0400</lastBuildDate><atom:link href="https://www.daveevans.us/tags/digitalocean/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes Nginx Ingress Controller</title>
       <link>https://www.daveevans.us/posts/kubernetes-nginx-ingress-controller/</link>

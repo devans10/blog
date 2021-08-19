@@ -6,11 +6,7 @@
     <description>Recent content in kubernetes on Dave Evans</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Nov 2019 12:39:08 -0500</lastBuildDate>
-    
-	<atom:link href="https://www.daveevans.us/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 Nov 2019 12:39:08 -0500</lastBuildDate><atom:link href="https://www.daveevans.us/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CI Build System with Terraform, Anisble, and Jenkins</title>
       <link>https://www.daveevans.us/posts/ci-build-system-with-terraform-ansible-jenkins/</link>
@@ -27,16 +23,6 @@
       
       <guid>https://www.daveevans.us/posts/my-journey-to-infrastructure-as-code/</guid>
       <description>This is the first part of a multipart series on how I introduced Infrastructure as Code(IaC) processes to my organization. My end goal is to implement a complete IaC pipeline from image build to deployment of infrastructure, but we are an organization that needs to go through a bit of a transformation and need to take this journey in small incremental steps. We have a very on-premises bias to our systems due to strict compliance regulations.</description>
-    </item>
-    
-    <item>
-      <title>Migrating Nextcloud to Kubernetes</title>
-      <link>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</link>
-      <pubDate>Sat, 29 Jun 2019 21:15:41 -0400</pubDate>
-      
-      <guid>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</guid>
-      <description>A little under a year ago I decided to migrate from Dropbox to Nextcloud and I couldn&amp;rsquo;t be happier with the results. It has been a very painless experience. I have upgraded multiple times without issue. Automatic photo sync from my phone works flawlessly, and I have begun to do much more with it than I ever did with Dropbox.
-I have only had one hiccup with the install, and quite honestly it was my fault.</description>
     </item>
     
     <item>

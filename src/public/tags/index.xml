@@ -6,10 +6,69 @@
     <description>Recent content in Tags on Dave Evans</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Nov 2019 12:39:08 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 15 Aug 2021 08:03:13 -0400</lastBuildDate><atom:link href="https://www.daveevans.us/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>weightloss</title>
+      <link>https://www.daveevans.us/tags/weightloss/</link>
+      <pubDate>Sun, 15 Aug 2021 08:03:13 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/tags/weightloss/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://www.daveevans.us/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IaC</title>
+      <link>https://www.daveevans.us/tags/iac/</link>
+      <pubDate>Tue, 22 Sep 2020 20:12:03 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/tags/iac/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>ovm</title>
+      <link>https://www.daveevans.us/tags/ovm/</link>
+      <pubDate>Tue, 22 Sep 2020 20:12:03 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/tags/ovm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>https://www.daveevans.us/tags/terraform/</link>
+      <pubDate>Tue, 22 Sep 2020 20:12:03 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oracle</title>
+      <link>https://www.daveevans.us/tags/oracle/</link>
+      <pubDate>Sun, 23 Aug 2020 09:52:21 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oraclevm</title>
+      <link>https://www.daveevans.us/tags/oraclevm/</link>
+      <pubDate>Sun, 23 Aug 2020 09:52:21 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/tags/oraclevm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packer</title>
+      <link>https://www.daveevans.us/tags/packer/</link>
+      <pubDate>Sun, 23 Aug 2020 09:52:21 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/tags/packer/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ansible</title>
@@ -35,42 +94,6 @@
       <pubDate>Wed, 27 Nov 2019 12:39:08 -0500</pubDate>
       
       <guid>https://www.daveevans.us/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>terraform</title>
-      <link>https://www.daveevans.us/tags/terraform/</link>
-      <pubDate>Wed, 27 Nov 2019 12:39:08 -0500</pubDate>
-      
-      <guid>https://www.daveevans.us/tags/terraform/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>IaC</title>
-      <link>https://www.daveevans.us/tags/iac/</link>
-      <pubDate>Sat, 02 Nov 2019 08:24:10 -0400</pubDate>
-      
-      <guid>https://www.daveevans.us/tags/iac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>packer</title>
-      <link>https://www.daveevans.us/tags/packer/</link>
-      <pubDate>Sat, 02 Nov 2019 08:24:10 -0400</pubDate>
-      
-      <guid>https://www.daveevans.us/tags/packer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nextcloud</title>
-      <link>https://www.daveevans.us/tags/nextcloud/</link>
-      <pubDate>Sat, 29 Jun 2019 21:15:41 -0400</pubDate>
-      
-      <guid>https://www.daveevans.us/tags/nextcloud/</guid>
       <description></description>
     </item>
     
@@ -161,6 +184,15 @@
       <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.daveevans.us/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nextcloud</title>
+      <link>https://www.daveevans.us/tags/nextcloud/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.daveevans.us/tags/nextcloud/</guid>
       <description></description>
     </item>
     

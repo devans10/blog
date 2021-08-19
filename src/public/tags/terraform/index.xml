@@ -6,10 +6,15 @@
     <description>Recent content in terraform on Dave Evans</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Nov 2019 12:39:08 -0500</lastBuildDate>
-    
-	<atom:link href="https://www.daveevans.us/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 22 Sep 2020 20:12:03 -0400</lastBuildDate><atom:link href="https://www.daveevans.us/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OVM Terraform Provider</title>
+      <link>https://www.daveevans.us/posts/ovm-terraform-provider/</link>
+      <pubDate>Tue, 22 Sep 2020 20:12:03 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/ovm-terraform-provider/</guid>
+      <description>Oracle VM 3(OVM) is the original vituralization solution from everybody&amp;rsquo;s favorite software company. I say &amp;ldquo;original&amp;rdquo; because last year they completely replaced the solution with a new version. The new solution, Oracle Linux Virtualization Manager is based on the upstream oVirt project and utilizes KVM for its hypervisor. Oracle VM utilizes the Xen hypervisor, so any migration to the new version will require a rebuild of the virtual environment and a migration of the virtual machines.</description>
+    </item>
     
     <item>
       <title>CI Build System with Terraform, Anisble, and Jenkins</title>
@@ -48,16 +53,6 @@ I began to take a look at Terraform to use within our environment for infrastruc
       <guid>https://www.daveevans.us/posts/deploying-my-blog-on-kubernetes/</guid>
       <description>So its been quite awhile since I posted anything. That is because I have been very busy with some personal projects and doing a lot of studying of some new technologies.
 As you can see I have completely redone my site. The previous site was running on the Ghost platform, which was spun up using a one-click deployment from DigitalOcean. Ghost was a good platform. I liked doing the posts in markdown, and it was easy to use.</description>
-    </item>
-    
-    <item>
-      <title>Terraform Provider for PureStorage FlashArray</title>
-      <link>https://www.daveevans.us/posts/terraform-provider-for-purestorage-flasharray/</link>
-      <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.daveevans.us/posts/terraform-provider-for-purestorage-flasharray/</guid>
-      <description>About a month and a half ago, I began to take a look at Terraform to use within our environment for infrastructure deployments. The goal was twofold. First, have a way to perform scripted, template style deployments using an Infrastructure-as-code philosophy. Second, to be able to use the same tool across multiple platforms both on-prem (VMWare, OracleVM, and FlashStack) and in the cloud (AWS and Azure).
-What is Terraform? From the terraform.</description>
     </item>
     
   </channel>

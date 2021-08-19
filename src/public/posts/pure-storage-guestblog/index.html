@@ -55,7 +55,7 @@
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
   <body class=" ">
@@ -71,7 +71,11 @@
       
         
           <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Blog</a>
+            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
           </li>
         
           <li class="navigation-item">
@@ -308,7 +312,7 @@ resource <span style="font-style:italic">&#34;purestorage_protectiongroup&#34;</
   name = <span style="font-style:italic">&#34;testpgroup&#34;</span>
   hgroups = [<span style="font-style:italic">&#34;</span><span style="font-weight:bold;font-style:italic">${</span>purestorage_hostgroup.testhgroup_tf_res.name<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">&#34;</span>]
 }
-</code></pre></div><p>At this point, our Terraform plan is a bit more complex.  We have added a second volume, as a copy of the first volume, thanks to the “source&rdquo; parameter. Notice that the source volume name is referenced by a variable using dot notation from the original resource.  Next, we add a host with a WWN, a hostgroup, and a protection group.  By using the variable, Terraform recognizes this as an implicit dependency.</p>
+</code></pre></div><p>At this point, our Terraform plan is a bit more complex.  We have added a second volume, as a copy of the first volume, thanks to the “source&quot; parameter. Notice that the source volume name is referenced by a variable using dot notation from the original resource.  Next, we add a host with a WWN, a hostgroup, and a protection group.  By using the variable, Terraform recognizes this as an implicit dependency.</p>
 <p>Run <code>terraform apply</code> to see what will change before confirming it…</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ terraform apply
 purestorage_volume.testvol_tf_res: Refreshing state... (ID: testvol_tf)
@@ -500,7 +504,7 @@ Destroy complete! Resources: 5 destroyed.
       <footer class="footer">
   <section class="container">
     
-     © 2020
+     © 2021
     
        · 
       Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.

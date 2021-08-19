@@ -3,17 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.daveevans.us/</loc>
+    <lastmod>2021-08-19T09:39:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/personal/goals/</loc>
+    <lastmod>2021-08-19T09:39:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/personal/</loc>
+    <lastmod>2021-08-19T09:39:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/personal/a-new-direction/</loc>
+    <lastmod>2021-08-15T08:03:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/</loc>
+    <lastmod>2021-08-15T08:03:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/weightloss/</loc>
+    <lastmod>2021-08-15T08:03:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/iac/</loc>
+    <lastmod>2020-09-22T20:12:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/ovm/</loc>
+    <lastmod>2020-09-22T20:12:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/posts/ovm-terraform-provider/</loc>
+    <lastmod>2020-09-22T20:12:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/posts/</loc>
+    <lastmod>2020-09-22T20:12:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/terraform/</loc>
+    <lastmod>2020-09-22T20:12:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/oracle/</loc>
+    <lastmod>2020-08-23T09:52:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/oraclevm/</loc>
+    <lastmod>2020-08-23T09:52:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/packer/</loc>
+    <lastmod>2020-08-23T09:52:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/posts/packer-ovm-templates/</loc>
+    <lastmod>2020-08-23T09:52:21-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.daveevans.us/tags/ansible/</loc>
     <lastmod>2019-11-27T12:39:08-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.daveevans.us/posts/ci-build-system-with-terraform-ansible-jenkins/</loc>
-    <lastmod>2019-11-27T12:39:08-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/</loc>
     <lastmod>2019-11-27T12:39:08-05:00</lastmod>
   </url>
   
@@ -28,53 +98,8 @@
   </url>
   
   <url>
-    <loc>https://www.daveevans.us/posts/</loc>
-    <lastmod>2019-11-27T12:39:08-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/tags/</loc>
-    <lastmod>2019-11-27T12:39:08-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/tags/terraform/</loc>
-    <lastmod>2019-11-27T12:39:08-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/posts/packer/</loc>
-    <lastmod>2019-11-02T10:24:24-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/tags/iac/</loc>
-    <lastmod>2019-11-02T08:24:10-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.daveevans.us/posts/my-journey-to-infrastructure-as-code/</loc>
     <lastmod>2019-11-02T08:24:10-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/tags/packer/</loc>
-    <lastmod>2019-11-02T08:24:10-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/posts/creating-ci-build-system-with-packer/</loc>
-    <lastmod>2019-09-26T17:40:17-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</loc>
-    <lastmod>2019-06-29T21:15:41-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/tags/nextcloud/</loc>
-    <lastmod>2019-06-29T21:15:41-04:00</lastmod>
   </url>
   
   <url>
@@ -120,11 +145,6 @@
   <url>
     <loc>https://www.daveevans.us/about/</loc>
     <lastmod>2019-03-03T18:08:03-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.daveevans.us/posts/terraform-provider-for-purestorage-flasharray/</loc>
-    <lastmod>2019-03-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -205,6 +225,11 @@
   <url>
     <loc>https://www.daveevans.us/tags/tools/</loc>
     <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.daveevans.us/tags/nextcloud/</loc>
+    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>

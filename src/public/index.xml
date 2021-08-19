@@ -6,10 +6,42 @@
     <description>Recent content on Dave Evans</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Nov 2019 12:39:08 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 19 Aug 2021 09:39:21 -0400</lastBuildDate><atom:link href="https://www.daveevans.us/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Goals</title>
+      <link>https://www.daveevans.us/personal/goals/</link>
+      <pubDate>Thu, 19 Aug 2021 09:39:21 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/personal/goals/</guid>
+      <description>August 15 - 21    Goal Sun Mon Tues Wed Thur Fri Sat Met     Lose 2 lbs. 248 249 249 247 245      10 push up challenge X X X X X      NRC Week 2  X  X        </description>
+    </item>
     
-	<atom:link href="https://www.daveevans.us/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A New Direction</title>
+      <link>https://www.daveevans.us/personal/a-new-direction/</link>
+      <pubDate>Sun, 15 Aug 2021 08:03:13 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/personal/a-new-direction/</guid>
+      <description>So it has been quite a while since I posted anything here. Not that I have ever been at a fast and furious pace of content creation, but almost a year since my last post is a bit much. Looking at the date of my last post I can begin to understand why. This blog is going to take a bit of a more personal turn. Mainly because that is what I have been working on&amp;hellip; me.</description>
+    </item>
     
+    <item>
+      <title>OVM Terraform Provider</title>
+      <link>https://www.daveevans.us/posts/ovm-terraform-provider/</link>
+      <pubDate>Tue, 22 Sep 2020 20:12:03 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/ovm-terraform-provider/</guid>
+      <description>Oracle VM 3(OVM) is the original vituralization solution from everybody&amp;rsquo;s favorite software company. I say &amp;ldquo;original&amp;rdquo; because last year they completely replaced the solution with a new version. The new solution, Oracle Linux Virtualization Manager is based on the upstream oVirt project and utilizes KVM for its hypervisor. Oracle VM utilizes the Xen hypervisor, so any migration to the new version will require a rebuild of the virtual environment and a migration of the virtual machines.</description>
+    </item>
+    
+    <item>
+      <title>Using Packer to Build VM Templates for Oracle VM 3</title>
+      <link>https://www.daveevans.us/posts/packer-ovm-templates/</link>
+      <pubDate>Sun, 23 Aug 2020 09:52:21 -0400</pubDate>
+      
+      <guid>https://www.daveevans.us/posts/packer-ovm-templates/</guid>
+      <description>Anyone that has had the pleasure of running Oracle VM 3(OVM3) has most likely struggled with of the lack of integrations with 3rd party tools and features compared to other hypervisors. For example, there are no live snapshot capabilities and there is no agentless backup solution. It seems that Oracle has not put much development into Oracle VM over the years, and with the release of Oracle VM 4, which is a fork of the upstream oVirt project, OVM3 is most likely near its End-of-Life.</description>
+    </item>
     
     <item>
       <title>CI Build System with Terraform, Anisble, and Jenkins</title>
@@ -21,41 +53,12 @@
     </item>
     
     <item>
-      <title>Packer</title>
-      <link>https://www.daveevans.us/posts/packer/</link>
-      <pubDate>Sat, 02 Nov 2019 10:24:24 -0400</pubDate>
-      
-      <guid>https://www.daveevans.us/posts/packer/</guid>
-      <description>Packer So, what is packer? From the packer.io website:
- Packer is an open source tool for creating identical machine images for multiple platforms from a single source configuration. Packer is lightweight, runs on every major operating system, and is highly performant, creating machine images for multiple platforms in parallel. Packer does not replace configuration management like Chef or Puppet. In fact, when building images, Packer is able to use tools like Chef or Puppet to install software onto the image.</description>
-    </item>
-    
-    <item>
       <title>My Journey to Infrastructure as Code - Part 1</title>
       <link>https://www.daveevans.us/posts/my-journey-to-infrastructure-as-code/</link>
       <pubDate>Sat, 02 Nov 2019 08:24:10 -0400</pubDate>
       
       <guid>https://www.daveevans.us/posts/my-journey-to-infrastructure-as-code/</guid>
       <description>This is the first part of a multipart series on how I introduced Infrastructure as Code(IaC) processes to my organization. My end goal is to implement a complete IaC pipeline from image build to deployment of infrastructure, but we are an organization that needs to go through a bit of a transformation and need to take this journey in small incremental steps. We have a very on-premises bias to our systems due to strict compliance regulations.</description>
-    </item>
-    
-    <item>
-      <title>Creating CI Build System with Packer</title>
-      <link>https://www.daveevans.us/posts/creating-ci-build-system-with-packer/</link>
-      <pubDate>Thu, 26 Sep 2019 17:40:17 -0400</pubDate>
-      
-      <guid>https://www.daveevans.us/posts/creating-ci-build-system-with-packer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Migrating Nextcloud to Kubernetes</title>
-      <link>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</link>
-      <pubDate>Sat, 29 Jun 2019 21:15:41 -0400</pubDate>
-      
-      <guid>https://www.daveevans.us/posts/migrating-nextcloud-to-kubernetes/</guid>
-      <description>A little under a year ago I decided to migrate from Dropbox to Nextcloud and I couldn&amp;rsquo;t be happier with the results. It has been a very painless experience. I have upgraded multiple times without issue. Automatic photo sync from my phone works flawlessly, and I have begun to do much more with it than I ever did with Dropbox.
-I have only had one hiccup with the install, and quite honestly it was my fault.</description>
     </item>
     
     <item>
@@ -94,7 +97,7 @@ As you can see I have completely redone my site. The previous site was running o
       <pubDate>Sun, 03 Mar 2019 20:53:54 -0500</pubDate>
       
       <guid>https://www.daveevans.us/projects/</guid>
-      <description>Terraform Provider for Flash  Project Site Github Repository  PuGo  Golang library for interacting with the Pure Storage APIs. Currently, has packages for FlashArray and Pure1 Github Repository  </description>
+      <description>Terraform Provider for Flash  Project Site Github Repository  PuGo  Golang library for interacting with the Pure Storage APIs. Currently, has packages for FlashArray and Pure1 Github Repository  Terraform Provider for OVM  Github Repository Terraform Registry  </description>
     </item>
     
     <item>
@@ -104,7 +107,7 @@ As you can see I have completely redone my site. The previous site was running o
       
       <guid>https://www.daveevans.us/resume/</guid>
       <description>Profile  I am a well-seasoned Infrastructure Engineer with professional experience with a variety of technologies in large scale environments. A passion for learning drives me to continually explore new technology both professionally and personally. I enjoy the challenge of creating secure, stable, and functional systems and applications, and solving all the problems that arise during the development life cycle.
-Professional Experience  Duquesne Light Company March 2015 – Present Infrastructure Engineer IV  Administer RedHat Linux 5, 6, and 7 environment of over 425 servers Developed a Cofiguration Management system using Puppet Created custom puppet modules for deploying applications within our environment.</description>
+Professional Experience  Duquesne Light Company May 2020 - Present Principal Architect  Responsible for developing a DevOps strategy for the IT organization Develop a CI/CD architecture that can be utilized to streamline project delivery and operations  March 2015 – May 2020 Infrastructure Engineer IV  Administer RedHat Linux 5, 6, and 7 environment of over 425 servers Developed a Cofiguration Management system using Puppet Created custom puppet modules for deploying applications within our environment.</description>
     </item>
     
     <item>
@@ -117,16 +120,6 @@ Professional Experience  Duquesne Light Company March 2015 – Present Infrastru
 Github Page
 GitLab Page
 Resume</description>
-    </item>
-    
-    <item>
-      <title>Terraform Provider for PureStorage FlashArray</title>
-      <link>https://www.daveevans.us/posts/terraform-provider-for-purestorage-flasharray/</link>
-      <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.daveevans.us/posts/terraform-provider-for-purestorage-flasharray/</guid>
-      <description>About a month and a half ago, I began to take a look at Terraform to use within our environment for infrastructure deployments. The goal was twofold. First, have a way to perform scripted, template style deployments using an Infrastructure-as-code philosophy. Second, to be able to use the same tool across multiple platforms both on-prem (VMWare, OracleVM, and FlashStack) and in the cloud (AWS and Azure).
-What is Terraform? From the terraform.</description>
     </item>
     
     <item>
