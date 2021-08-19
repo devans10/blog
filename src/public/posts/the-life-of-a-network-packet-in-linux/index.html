@@ -4,30 +4,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="Dave Evans">
-    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="description" content="I have encountered this problem numerous times, and every time I am told &ldquo;There is something wrong with the network!!&rdquo;
+What I really need is someone much more creative than me to write a children&rsquo;s song similar to Schoolhouse Rock&rsquo;s &ldquo;I&rsquo;m Just a Bill&rdquo;, except for network packets
+Scenario    There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0.">
     <meta name="keywords" content="blog,devops,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Life of a Network Packet in Linux"/>
 <meta name="twitter:description" content="I have encountered this problem numerous times, and every time I am told &ldquo;There is something wrong with the network!!&rdquo;
 What I really need is someone much more creative than me to write a children&rsquo;s song similar to Schoolhouse Rock&rsquo;s &ldquo;I&rsquo;m Just a Bill&rdquo;, except for network packets
-Scenario There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0."/>
+Scenario    There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0."/>
 
     <meta property="og:title" content="The Life of a Network Packet in Linux" />
 <meta property="og:description" content="I have encountered this problem numerous times, and every time I am told &ldquo;There is something wrong with the network!!&rdquo;
 What I really need is someone much more creative than me to write a children&rsquo;s song similar to Schoolhouse Rock&rsquo;s &ldquo;I&rsquo;m Just a Bill&rdquo;, except for network packets
-Scenario There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0." />
+Scenario    There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.daveevans.us/posts/the-life-of-a-network-packet-in-linux/" />
 <meta property="article:published_time" content="2018-09-15T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-09-15T00:00:00+00:00" />
 
 
-    
-      <base href="https://www.daveevans.us/posts/the-life-of-a-network-packet-in-linux/">
-    
     <title>
   The Life of a Network Packet in Linux · Dave Evans
 </title>
@@ -36,14 +39,12 @@ Scenario There are 2 servers. Each server has 2 network interfaces that all have
       <link rel="canonical" href="https://www.daveevans.us/posts/the-life-of-a-network-packet-in-linux/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="https://www.daveevans.us/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css" integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -51,48 +52,67 @@ Scenario There are 2 servers. Each server has 2 network interfaces that all have
     
 
     
-      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
-    
 
     
-    
+
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://www.daveevans.us/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.daveevans.us/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
-  <body class=" ">
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="https://www.daveevans.us/">
       Dave Evans
     </a>
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
+    
   </section>
 </nav>
 
@@ -103,37 +123,57 @@ Scenario There are 2 servers. Each server has 2 network interfaces that all have
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">The Life of a Network Packet in Linux</h1>
+          <h1 class="title">
+            <a class="title-link" href="https://www.daveevans.us/posts/the-life-of-a-network-packet-in-linux/">
+              The Life of a Network Packet in Linux
+            </a>
+          </h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fas fa-calendar"></i>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
               <time datetime='2018-09-15T00:00:00Z'>
                 September 15, 2018
               </time>
             </span>
             <span class="reading-time">
-              <i class="fas fa-clock"></i>
-              6 minutes read
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              6-minute read
             </span>
           </div>
           
+          
           <div class="tags">
-  <i class="fas fa-tag"></i>
-    <a href="https://www.daveevans.us/tags/networking/">networking</a>
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/networking/">networking</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/linux/">linux</a></div>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/linux/">linux</a>
+    </span></div>
 
         </div>
       </header>
 
       <div>
+        
         <p>I have encountered this problem numerous times, and every time I am told &ldquo;There is something wrong with the network!!&rdquo;</p>
 <p>What I really need is someone much more creative than me to write a children&rsquo;s song similar to Schoolhouse Rock&rsquo;s &ldquo;I&rsquo;m Just a Bill&rdquo;, except for network packets</p>
-<h3 id="scenario">Scenario</h3>
+<h3 id="scenario">
+  Scenario
+  <a class="heading-link" href="#scenario">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>There are 2 servers.  Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0.</p>
-<h6 id="servera">ServerA:</h6>
+<h6 id="servera">
+  ServerA:
+  <a class="heading-link" href="#servera">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h6>
 <blockquote>
 <p>eth0:
 IP: 10.1.0.100/24
@@ -175,7 +215,12 @@ Gateway: 10.2.0.1</p>
 </tr>
 </tbody>
 </table>
-<h6 id="serverb">ServerB:</h6>
+<h6 id="serverb">
+  ServerB:
+  <a class="heading-link" href="#serverb">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h6>
 <blockquote>
 <p>eth0:
 IP: 10.3.0.100/24
@@ -217,9 +262,19 @@ Gateway: 10.2.0.1</p>
 </tr>
 </tbody>
 </table>
-<h3 id="the-problem">The Problem</h3>
+<h3 id="the-problem">
+  The Problem
+  <a class="heading-link" href="#the-problem">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>In this scenario, as it is currently setup, you will <em>NOT</em> be able to make a network connection from ServerA:eth1 to ServerB:eth1.</p>
-<h3 id="the-reason">The Reason</h3>
+<h3 id="the-reason">
+  The Reason
+  <a class="heading-link" href="#the-reason">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>So we are going to deal with a simple Ping packet, and follow it through the its path.  However, the same process can be assumed for an initial SYN packet being sent to establish a TCP connection.  I&rsquo;m not going to talk about the network here too much. We will assume the switches and routers the servers are connected to are setup properly, because as I have stated <strong>the network is <em>not</em> the problem</strong></p>
 <p>So we issue the following command from ServerA:</p>
 <p><code>$ ping -I eth1 10.4.0.100</code></p>
@@ -227,9 +282,19 @@ Gateway: 10.2.0.1</p>
 <p>Now the fun begins&hellip;</p>
 <p>ServerB receives the ping and begins to craft the reply packet.  It sets the <code>destIP</code> to 10.2.0.100.  Since this server was not explicitly told which interface to use, like ServerA was when we initiated the <code>ping</code>, it must look at its route table to determine which interface to use.  The only route that matches is the <code>Default</code> route. So the server decides to send the packet out eth0 and gives the packet a <code>srcIP</code> of 10.3.0.100.  the packet is then sent out to the 10.3.0.1 gateway, which routes it to the 10.2.0.1 gateway, and is finally delivered to the 10.2.0.100 interface.</p>
 <p>The problem is the packet that is received by eth1 on ServerA has a <code>srcIP</code> of 10.3.0.100, but ServerA was waiting for a reply from 10.4.0.100.  So ServerA believes in never received a reply and reports a connection failure.</p>
-<h3 id="the-solutions">The Solution(s)</h3>
+<h3 id="the-solutions">
+  The Solution(s)
+  <a class="heading-link" href="#the-solutions">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>There are a couple solutions to this problem, but they all involve settings on the servers.  If anyone know of additional solutions, please let me know.  I would love to have another way to solve this.</p>
-<h4 id="set-static-routes-between-networks">Set static routes between networks</h4>
+<h4 id="set-static-routes-between-networks">
+  Set static routes between networks
+  <a class="heading-link" href="#set-static-routes-between-networks">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
 <p>Creating a route on each server specifying which gateway should be used to reach the destination.</p>
 <p>On ServerA:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip route add 10.4.0.0/24 via 10.2.0.1 dev eth1
@@ -311,7 +376,12 @@ Gateway: 10.2.0.1</p>
 </tbody>
 </table>
 <p>After these changes, when doing the initial <code>ping</code> you know longer need to specify <code>-I eth1</code>, the server will use eth1 because of the decision made by its route table.  Now when ServerB is crafting the reply, it will find 10.2.0.0/24 in its route table and see it is supposed to use eth1 and send to gateway 10.4.0.1.  It will now set the <code>srcIP</code> to 10.4.0.100. When ServerA receives the reply, it will be from the correct address, and the ping will succeed.</p>
-<h4 id="adding-a-secondary-route-table">Adding a secondary route table</h4>
+<h4 id="adding-a-secondary-route-table">
+  Adding a secondary route table
+  <a class="heading-link" href="#adding-a-secondary-route-table">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
 <p>Another way to accomplish the same end result as above is to add a secondary route table.  With this solution, you can create rules and routes that will send reply packets back out the same interface they came in through.</p>
 <p>ServerA:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo 200 eth1 &gt;&gt; /etc/iproute2/rt_tables
@@ -323,15 +393,26 @@ $ ip rule add from 10.4.0.100 dev eth1 table eth1
 $ ip route add default via 10.4.0.1 dev eth1 table eth1
 </code></pre></div><p>These rules and routes can be persisted by creating a <code>rule-eth1</code> and <code>route-eth1</code> files in the /etc/sysconfig/network-scripts (on RHEL derivative systems or /etc/sysconfig/network on Debian derivative systems.
 These files will add the rules and routes on interface startup.</p>
-<h4 id="iptables-rules">IPTables rules</h4>
+<h4 id="iptables-rules">
+  IPTables rules
+  <a class="heading-link" href="#iptables-rules">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
 <p>I am sure there are also ways to accomplish this using <code>iptables</code> rules, but in my opinion this is a much worse ways to get the desired result.  I believe this is a case where the ends do not justify the means.</p>
-<h3 id="conclusion">Conclusion</h3>
+<h3 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>I hope that there are other solutions to this that I am unaware of.  I started to look at some EC2 servers on AWS as an example. Those servers can have a public IP address in one subnet and a private IP address in your VPC subnet.  However, if you look into it, the EC2 instance only has a listening interface on the private IP.  I could speculate on how Amazon is doing this, but I haven&rsquo;t dug into it, so I won&rsquo;t do that now.  Needless to say, its not the same situation.</p>
 <p>A use case for this setup is wanting to use a dedicated replication network that is separate from your normal data access network.  For example, an Oracle Database DataGuard.  If your replica is in a different Data Center, and on a different subnet, and you want this traffic to go across a dedicated interface so it does not interfere with you primary data access network.</p>
 <p>I have often run into these situation when setting up systems and architectures for Disaster Recovery.  I often have seen people give up, blame &ldquo;those idiot network administrators&rdquo; for not setting it up right, and just use the primary interfaces.  However, using the secondary network interfaces usually serves a legitimate purpose, such as network segmentation.</p>
 <p>Hopefully this will help someone when they hit these situations.</p>
 
       </div>
+
 
       <footer>
         
@@ -362,24 +443,54 @@ These files will add the rules and routes on interface startup.</p>
       </footer>
     </article>
 
-    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
   </section>
 
       </div>
 
-      <footer class="footer">
-  <section class="container">
-    
-     © 2021
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-    
-  </section>
-</footer>
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2021
+         Dave Evans 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
 
     </main>
+
+    
+      
+      <script src="https://www.daveevans.us/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js" integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -396,6 +507,17 @@ if (!doNotTrack) {
 </script>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>

@@ -15,7 +15,7 @@
       <guid>https://www.daveevans.us/posts/the-life-of-a-network-packet-in-linux/</guid>
       <description>I have encountered this problem numerous times, and every time I am told &amp;ldquo;There is something wrong with the network!!&amp;rdquo;
 What I really need is someone much more creative than me to write a children&amp;rsquo;s song similar to Schoolhouse Rock&amp;rsquo;s &amp;ldquo;I&amp;rsquo;m Just a Bill&amp;rdquo;, except for network packets
-Scenario There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0.</description>
+Scenario    There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0.</description>
     </item>
     
   </channel>

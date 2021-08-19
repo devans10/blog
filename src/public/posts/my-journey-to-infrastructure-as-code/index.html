@@ -4,9 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="Dave Evans">
-    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="description" content="How I started to implement Infrastructure as Code">
     <meta name="keywords" content="blog,devops,personal">
 
     <meta name="twitter:card" content="summary"/>
@@ -21,9 +25,6 @@
 <meta property="article:modified_time" content="2019-11-02T08:24:10-04:00" />
 
 
-    
-      <base href="https://www.daveevans.us/posts/my-journey-to-infrastructure-as-code/">
-    
     <title>
   My Journey to Infrastructure as Code - Part 1 · Dave Evans
 </title>
@@ -32,14 +33,12 @@
       <link rel="canonical" href="https://www.daveevans.us/posts/my-journey-to-infrastructure-as-code/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="https://www.daveevans.us/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css" integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -47,48 +46,67 @@
     
 
     
-      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
-    
 
     
-    
+
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://www.daveevans.us/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.daveevans.us/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
-  <body class=" ">
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="https://www.daveevans.us/">
       Dave Evans
     </a>
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
+    
   </section>
 </nav>
 
@@ -99,40 +117,58 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">My Journey to Infrastructure as Code - Part 1</h1>
+          <h1 class="title">
+            <a class="title-link" href="https://www.daveevans.us/posts/my-journey-to-infrastructure-as-code/">
+              My Journey to Infrastructure as Code - Part 1
+            </a>
+          </h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fas fa-calendar"></i>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
               <time datetime='2019-11-02T08:24:10-04:00'>
                 November 2, 2019
               </time>
             </span>
             <span class="reading-time">
-              <i class="fas fa-clock"></i>
-              10 minutes read
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              10-minute read
             </span>
           </div>
           
+          
           <div class="tags">
-  <i class="fas fa-tag"></i>
-    <a href="https://www.daveevans.us/tags/iac/">IaC</a>
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/iac/">IaC</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/terraform/">terraform</a>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/terraform/">terraform</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/kubernetes/">kubernetes</a>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/kubernetes/">kubernetes</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/packer/">packer</a>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/packer/">packer</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/ansible/">ansible</a>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/ansible/">ansible</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/jenkins/">jenkins</a></div>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/jenkins/">jenkins</a>
+    </span></div>
 
         </div>
       </header>
 
       <div>
+        
         <p>This is the first part of a multipart series on how I introduced Infrastructure as Code(IaC) processes to my organization. My end goal is to implement a complete IaC pipeline from image build to deployment of infrastructure, but we are an organization that needs to go through a bit of a transformation and need to take this journey in small incremental steps.  We have a very on-premises bias to our systems due to strict compliance regulations. However, there is a desire to run more workloads in the cloud where appropriate.  So we are looking for a solution that is capable of hybrid cloud, or at the very least not to suffer from cloud or vendor lock in.</p>
 <p>One thing that does not lack in the IaC space is tool options, and this may be the toughest part to getting started.  As an Infrastructure Engineer, I have spent years looking at different tools for provisioning, configuration management, and deployment. Furthermore, as I have planned out this implementation, I have spent months studying different tools to narrow down the tool chain that I believe is best for us and will work well to compliment each tool&rsquo;s strengths and weaknesses.  There are literally dozens of great tools out there, and there is no one right answer to tool selection.  It all depends on you and your team&rsquo;s preferences, and what works for your organization.  The initial set of tools I will be implementing are:</p>
 <ul>
@@ -146,7 +182,12 @@
 <p>This list is by no means exhaustive, and I already have other ideas for tools that will be needed down the line.  For instance, Chef&rsquo;s <a href="https://www.inspec.io/">InSpec</a> for infrastructure testing once we have our pipelines running.</p>
 <p>I&rsquo;m sure someone out there is thinking, &ldquo;Wow, you are an organization just starting out in DevOps, and jumping right into Kubernetes?&rdquo; The answer is &ndash; kind of and its complicated. There is a learning curve for not only IaC in general, but also the tools involved in running these environments.  Our plan is to start running some of our team&rsquo;s tools within containers and kubernetes to learn the intricacies and nuances of these enviroments to better support our development teams going forward.</p>
 <p>Just to set some expectations for what I am building.  As stated, our organization as a whole is just beginning to explore the world of DevOps.  We have some pockets on the application side that are doing some really great things, but there is still a lot of transformation that will need to take place.  My team is responsible for hardware, storage, network, and operating systems.  We do help with some application deployment, but it is not entirely our responsiblity.  So to start out we are not looking for entirely imutable infrastructure that we tear down and rebuild with every release.  We may get there, but that is not a goal of this first phase rollout.  The initial goal is to automate as much of the builds as possible, and then be able to control the configuration through code.</p>
-<h2 id="git">Git</h2>
+<h2 id="git">
+  Git
+  <a class="heading-link" href="#git">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <p>You can&rsquo;t have Infrastructure as Code, if you don&rsquo;t have code, and having code without source control doesn&rsquo;t help anyone.  The first step is to setup a git repository and determine the file structure we want to use.  Again, there is no right answer here, its just what works for your organization.  The stucture I&rsquo;m starting with is:</p>
 <pre><code>&lt;project&gt;
 |
@@ -173,7 +214,12 @@
 <p>This structure would have a separate repository for each project.  Each project would have a branch for each lifecycle environment, i.e. Development branch, Testing branch, Staging branch, and the Master branch would be the Production environment.  Branches should only be able to accept Pull Requests from the preceding branch, and each branch would have its own Jenkins Pipeline which would trigger on commits.</p>
 <p>The <code>roles</code> and <code>modules</code> directories would contain git submodules to version controlled Ansible roles and Terraform modules to promote code reuse.  The <code>environment</code> directory would contain the variable files for each lifecycle environment.  I plan to name the files/folder the same as the git branch for the environment.  This way we can easily use variables in the pipeline for variable substitution.  The <code>files</code> directory is for any files, templates, etc that may be needed, and <code>outputs</code> is the landing spot for any files generated by the build.  For example, I plan to generate the ansible inventory file from the Terraform server builds using a <code>local_file</code> resource that would be specific to each project.  The <code>tests</code> directory would hold any infrastructure tests that we want to run in the build pipeline.  The rest of the files in the directory will be the primary Terraform configuration files which should refer to the terraform modules, the ansible playbook which should call the ansible roles.</p>
 <p>This setup gives us the most flexability between custom code and reusable code.  Early on writing a reusable Ansible role could be difficult for some of the administrators that have never done any ansible code previously.  This will allow them to either place ansible commands directly in the playbook or create a custom role under the <code>roles</code> directory.  The important part early on in this process is to get people used to performing tasks via code, and not logging in and making changes directly.  In addition, using long living git branches per environment will get people to learn the idea of pull requests and give us the opportunity for peer review of changes.  However, we do need to be cognizant of slowing down the change process too much, and causing frustration to our end users.</p>
-<h2 id="terraform-vs-ansible">Terraform vs Ansible</h2>
+<h2 id="terraform-vs-ansible">
+  Terraform vs Ansible
+  <a class="heading-link" href="#terraform-vs-ansible">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <p>Both Ansible and Terraform have a lot of crossover in functionality, but each definitely has its strengths.  Terraform is great at provisioning infrastructure and keeping track of the state that is desired, but is not good at making configuration changes that it cannot very the state of later, for instance, application configurations installed in a VM.  Ansible on the other hand is an excellent tool for configuring individual hosts, and can execute multiple times and expect the same result.  However, its lack of state can be problmatic in some cases.  For example, take the 2 following code snippets for deploying EC2 instances in AWS:</p>
 <p>Ansible:</p>
 <pre><code>- ec2:
@@ -212,13 +258,19 @@
 <p>In most cases this will work just fine but there are exceptions.  For instance, if I&rsquo;m setting up a Kubernetes cluster via Terraform, I need to run an Ansible role to configure docker on each host after creating the machine but before configuring Kubernetes.  In these cases, I will run the ansible playbook from within the Terraform configuration, and then run it again in the Ansible stage.  Being that Ansible does a really good job of being idempotent between configuration runs on the hosts, it doesn&rsquo;t hurt anything to get both this initial run and subsequent ones and gives us the benefit of easily changing configuration later.</p>
 <p>All that being said, the Internet tells me that the proper way to do everything I stated above is to pre-bake my VM images using Packer, and then slaughter them like cattle everytime I want to make a change to them.  Here is why I&rsquo;m not going to do that&hellip; yet.</p>
 <p>This is going to be a big change for our organization, and just switching to a git workflow is going to have a learning curve.  I feel that if we start this process by telling people they cannot login to servers anymore and make changes, they will reject this process from the start.  The better approach for us is to show them the benefits of these processes, and make the repeatable processes easier for them in the long run. Then work up to the idea of making code changes for simple/small/one-off configuration changes.</p>
-<h2 id="the-pipeline">The Pipeline</h2>
+<h2 id="the-pipeline">
+  The Pipeline
+  <a class="heading-link" href="#the-pipeline">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <p>To this point I have eluded to what I want to accomplish, but mentioned little on <em>how</em> I want to execute it.  This initial project is to take care of simple server builds in our on-prem virtual environments.  The process flow will have administrators commit code to git.  The commit will trigger a Jenkin&rsquo;s pipeline via a webhook.  Jenkins itself will be running within a kubernetes cluster utilizing the kubernetes plugin.  The pipeline will spin up a slave Pod within kubernetes to execute the pipeline steps.  The pod will contain a separate container for each build tool, i.e. a Terraform container, a Ansible container, and a InSpec container.  These containers will execute their steps against our virtual environments, then terminate.</p>
 <p><img src="https://www.daveevans.us/img/CI_CD_Pipeline.svg" alt="CI/CD Pipeline"></p>
 <p>The benefits of this workflow is that it is simple and straight forward enough to follow. The Hypervisor is generic and can be a cloud environment, VMware, oVirt, or Xen, as long as there is a Terraform provider to work with it.  Running Jenkins within Kubernetes makes it flexible enough to run anywhere, and we don&rsquo;t need to have build servers sitting around waiting for builds.  This initial workflow also lends itself well to being able to addon application configurations to the end of the pipeline, or utilize separate repositories for the application configuration and access Terraform&rsquo;s remote state to get server details.</p>
 <p>In the follow up posts, I will go through how I setup all the infrastructure and workflows to make this pipeline work.</p>
 
       </div>
+
 
       <footer>
         
@@ -249,24 +301,54 @@
       </footer>
     </article>
 
-    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
   </section>
 
       </div>
 
-      <footer class="footer">
-  <section class="container">
-    
-     © 2021
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-    
-  </section>
-</footer>
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2021
+         Dave Evans 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
 
     </main>
+
+    
+      
+      <script src="https://www.daveevans.us/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js" integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -283,6 +365,17 @@ if (!doNotTrack) {
 </script>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>

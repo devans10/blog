@@ -23,7 +23,7 @@
       
       <guid>https://www.daveevans.us/posts/kubernetes-on-raspberry-pi-the-hard-way-part-4/</guid>
       <description>Kubernetes on Raspberry Pi, The Hard Way - Part 1 Kubernetes on Raspberry Pi, The Hard Way - Part 2 Kubernetes on Raspberry Pi, The Hard Way - Part 3  Now its time to setup the worker nodes. This is where I will deviate the most from the original Kubernetes the Hard Way, as I plan to change the container runtime from containerd to docker.
-Install and Configure Docker These commands should be run on each worker node.</description>
+Install and Configure Docker    These commands should be run on each worker node.</description>
     </item>
     
     <item>

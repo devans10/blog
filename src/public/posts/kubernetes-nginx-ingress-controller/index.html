@@ -4,9 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="Dave Evans">
-    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="description" content="Setting up an Nginx Ingress Controller on a Digital Ocean Kubernetes Cluster">
     <meta name="keywords" content="blog,devops,personal">
 
     <meta name="twitter:card" content="summary"/>
@@ -21,9 +25,6 @@
 <meta property="article:modified_time" content="2019-03-16T15:43:08-04:00" />
 
 
-    
-      <base href="https://www.daveevans.us/posts/kubernetes-nginx-ingress-controller/">
-    
     <title>
   Kubernetes Nginx Ingress Controller · Dave Evans
 </title>
@@ -32,14 +33,12 @@
       <link rel="canonical" href="https://www.daveevans.us/posts/kubernetes-nginx-ingress-controller/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="https://www.daveevans.us/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css" integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -47,48 +46,67 @@
     
 
     
-      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
-    
 
     
-    
+
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://www.daveevans.us/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.daveevans.us/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
-  <body class=" ">
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="https://www.daveevans.us/">
       Dave Evans
     </a>
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
+    
   </section>
 </nav>
 
@@ -99,35 +117,50 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Kubernetes Nginx Ingress Controller</h1>
+          <h1 class="title">
+            <a class="title-link" href="https://www.daveevans.us/posts/kubernetes-nginx-ingress-controller/">
+              Kubernetes Nginx Ingress Controller
+            </a>
+          </h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fas fa-calendar"></i>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
               <time datetime='2019-03-16T15:43:08-04:00'>
                 March 16, 2019
               </time>
             </span>
             <span class="reading-time">
-              <i class="fas fa-clock"></i>
-              6 minutes read
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              6-minute read
             </span>
           </div>
           
+          
           <div class="tags">
-  <i class="fas fa-tag"></i>
-    <a href="https://www.daveevans.us/tags/kubernetes/">kubernetes</a>
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/kubernetes/">kubernetes</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/digitalocean/">digitalocean</a></div>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/digitalocean/">digitalocean</a>
+    </span></div>
 
         </div>
       </header>
 
       <div>
+        
         <p>In my previous <a href="https://www.daveevans.us/posts/deploying-my-blog-on-kubernetes/">post</a>, I deployed my website on a Kubernetes cluster running on DigitalOcean.  However, I still would like to decrease my costs as much as possible.  The original setup used a Digital Ocean LoadBalancer instance as the Ingress to the Kubernetes Pods.  This works great and is very easy to setup with Terraform.  However, there are a couple downsides to this setup. At this time, the Kubernetes ingress objects cannot take advantage of Let&rsquo;s Encrypt integration with the DigitalOcean LoadBalancer instances, and the solution will end up being a bit pricey.  For any additional websites that are setup on this cluster, another LoadBalancer instance will need to be purchased, and the fact that each LoadBalancer instance cost the same as a Droplet on DO, this really won&rsquo;t save me any money.</p>
 <p>The solution to this is to use an Nginx Ingress controller that is fronted by a LoadBalancer instance.  This will provide the reliability of using a LoadBalancer instance, but give the flexiblity of running an Nginx reverse proxy instance that can route traffic by Virtual Host name.</p>
-<h3 id="setting-up-the-kubernetes-nginx-ingress-controller">Setting up the Kubernetes Nginx Ingress Controller</h3>
+<h3 id="setting-up-the-kubernetes-nginx-ingress-controller">
+  Setting up the Kubernetes Nginx Ingress Controller
+  <a class="heading-link" href="#setting-up-the-kubernetes-nginx-ingress-controller">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>The <a href="https://kubernetes.github.io/ingress-nginx/">Nginx Ingress Controller</a> is maintained by the Kubernetes project.  It is built around the Kubernetes Ingress resource, using a ConfigMap to store the Nginx configuration.</p>
 <p>The Nginx Ingress Controller consists of a Pod that runs an Nginx web server and watches the Kubernetes Control Plane for new and updated Ingress Resource objects.</p>
 <p>I wanted (and tried) to do all of this via Terraform.  However, there were are some limitations in the Kubernetes terraform provider that prevent all the steps being executed with Terraform.  The Terraform provider does not support setting kubernetes.io/* annotations, as they are normally used by the scheduler.  There are a couple of mandatory yaml files the need to be applied to setup the ingress controller that have these annotaions in them.  Therefore, I was not able to write valid Terraform configurations to replace these.</p>
@@ -151,17 +184,37 @@ deployment.extensions/nginx-ingress-controller created
 NAME            TYPE           CLUSTER-IP       EXTERNAL-IP       PORT(S)                      AGE
 ingress-nginx   LoadBalancer   10.245.222.202   134.209.128.201   80:32725/TCP,443:30659/TCP   122m
 </code></pre></div><p>The external IP should correspond to the IP of the LoadBalancer.</p>
-<h3 id="install-helm">Install Helm</h3>
+<h3 id="install-helm">
+  Install Helm
+  <a class="heading-link" href="#install-helm">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>It is possible to integrate <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a> certificates with the Nginx Ingress controller, but the only documentation I found on how to do this uses Helm for the installation.  I have not used Helm before, and really know very little about it. Here are the quick installation steps I used.</p>
-<h5 id="install-helm-on-my-local-machine">Install Helm on my local machine.</h5>
+<h5 id="install-helm-on-my-local-machine">
+  Install Helm on my local machine.
+  <a class="heading-link" href="#install-helm-on-my-local-machine">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
 <p>There are normal instructions <a href="https://helm.sh/docs/using_helm/">here</a>.  I found it easiest to use the snap.  I prefer snaps for installations like this.  If I don&rsquo;t know much about a peice of software, a snap makes it easy to remove cleanly from my system.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ snap install helm --classic
-</code></pre></div><h5 id="install-tiller-into-the-kubernetes-cluster">Install tiller into the Kubernetes cluster</h5>
+</code></pre></div><h5 id="install-tiller-into-the-kubernetes-cluster">
+  Install tiller into the Kubernetes cluster
+  <a class="heading-link" href="#install-tiller-into-the-kubernetes-cluster">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
 <p>Tiller is the peice of Helm that does work within the kubernetes cluster.  The below commands create a service account for tiller in the cluster and assign it the <code>cluster-admin</code> role.  It then uses <code>helm</code> to initialize the installation.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ kubectl -n kube-system create serviceaccount tiller
 $ kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 $ helm init --service-account tiller
-</code></pre></div><h3 id="install-cert-manager">Install Cert-Manager</h3>
+</code></pre></div><h3 id="install-cert-manager">
+  Install Cert-Manager
+  <a class="heading-link" href="#install-cert-manager">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p><code>cert-manager</code> is a service that runs inside the cluster and manages tls certificates for services within the cluster.  There are 3 parts of this service.</p>
 <ul>
 <li>A cert-manager service that validates certs and renews them when necessary</li>
@@ -199,7 +252,12 @@ spec:
    http01: {}
 </code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ kubectl create -f prod_issuer.yaml
 </code></pre></div><p><em>Note: This is an example of the short comings of the Kubernetes Terraform provider.  This is a custom resource created within the cluster.  So obviously there is not a Terraform resource available to set configure it.  On the plus side, this is more of a cluster level function, just like the Nginx Ingress Controller.  So I can configure these for the cluster, then still use Terraform to deploy the applications in the cluster.  However, this feels less like Infrastructure as Code, and more like application deployment.</em></p>
-<h3 id="create-the-ingress">Create the Ingress</h3>
+<h3 id="create-the-ingress">
+  Create the Ingress
+  <a class="heading-link" href="#create-the-ingress">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>First, I need to change the current service to my website from a <code>LoadBalancer</code> to a <code>ClusterIP</code>.  I edited the Terraform configuration for that resource</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">resource &#34;kubernetes_service&#34; &#34;blog&#34; {
   metadata {
@@ -253,6 +311,7 @@ spec:
 
       </div>
 
+
       <footer>
         
 
@@ -282,24 +341,54 @@ spec:
       </footer>
     </article>
 
-    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
   </section>
 
       </div>
 
-      <footer class="footer">
-  <section class="container">
-    
-     © 2021
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-    
-  </section>
-</footer>
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2021
+         Dave Evans 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
 
     </main>
+
+    
+      
+      <script src="https://www.daveevans.us/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js" integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -316,6 +405,17 @@ if (!doNotTrack) {
 </script>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>

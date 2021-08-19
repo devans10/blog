@@ -4,9 +4,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="Dave Evans">
-    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="description" content="The next part of this migration is something that is a LONG time coming, replacing Evernote. However, this isn&rsquo;t quite a migration. I had stopped using Evernote a few years ago, when I had switched my daily driver to Linux. Most of my data that was previously in Evernote, I had exported to folders in my Dropbox, but while I kept it, I didn&rsquo;t really use it anymore.
+Most of my note taking has reverted to just text files that reside spread across my Documents directory, and I have no good way of organizing them.">
     <meta name="keywords" content="blog,devops,personal">
 
     <meta name="twitter:card" content="summary"/>
@@ -23,9 +28,6 @@ Most of my note taking has reverted to just text files that reside spread across
 <meta property="article:modified_time" content="2018-08-26T00:00:00+00:00" />
 
 
-    
-      <base href="https://www.daveevans.us/posts/using-qownnotes-with-nextcloud/">
-    
     <title>
   Using QOwnNotes with NextCloud · Dave Evans
 </title>
@@ -34,14 +36,12 @@ Most of my note taking has reverted to just text files that reside spread across
       <link rel="canonical" href="https://www.daveevans.us/posts/using-qownnotes-with-nextcloud/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="https://www.daveevans.us/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css" integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -49,48 +49,67 @@ Most of my note taking has reverted to just text files that reside spread across
     
 
     
-      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
-    
 
     
-    
+
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://www.daveevans.us/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.daveevans.us/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
-  <body class=" ">
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="https://www.daveevans.us/">
       Dave Evans
     </a>
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
+    
   </section>
 </nav>
 
@@ -101,39 +120,64 @@ Most of my note taking has reverted to just text files that reside spread across
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Using QOwnNotes with NextCloud</h1>
+          <h1 class="title">
+            <a class="title-link" href="https://www.daveevans.us/posts/using-qownnotes-with-nextcloud/">
+              Using QOwnNotes with NextCloud
+            </a>
+          </h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fas fa-calendar"></i>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
               <time datetime='2018-08-26T00:00:00Z'>
                 August 26, 2018
               </time>
             </span>
             <span class="reading-time">
-              <i class="fas fa-clock"></i>
-              3 minutes read
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
             </span>
           </div>
           
+          
           <div class="tags">
-  <i class="fas fa-tag"></i>
-    <a href="https://www.daveevans.us/tags/nextcloud/">nextcloud</a>
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/nextcloud/">nextcloud</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/qownnotes/">QOwnNotes</a></div>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/qownnotes/">QOwnNotes</a>
+    </span></div>
 
         </div>
       </header>
 
       <div>
+        
         <p>The next part of this migration is something that is a <em>LONG</em> time coming,  replacing Evernote. However, this isn&rsquo;t quite a migration.  I had stopped using Evernote a few years ago, when I had switched my daily driver to Linux.  Most of my data that was previously in Evernote, I had exported to folders in my Dropbox, but while I <em>kept</em> it, I didn&rsquo;t really use it anymore.</p>
 <p>Most of my note taking has reverted to just text files that reside spread across my Documents directory, and I have no good way of organizing them.</p>
-<h3 id="qownnotes">QOwnNotes</h3>
+<h3 id="qownnotes">
+  QOwnNotes
+  <a class="heading-link" href="#qownnotes">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p><a href="https://www.qownnotes.org/">QOwnNotes</a> is a nice, cross-platform note taking application that integrates with the NextCloud Notes application. It supports Markdown, which I have become a fan of the more I use GitLab/GitHub and Ghost.  It gives you the ability to tag notes, search them, has quick, customizable shortcuts, and has some scripting ability (which I haven&rsquo;t dug into yet.)</p>
 <p>QOwnNotes can work without a NextCloud integration, and you can use it with just about any syncing application, Dropbox, SeaFile, Syncthing, etc. Honestly, I wish I had looked at this sooner.</p>
-<h3 id="setup">Setup</h3>
-<h5 id="nextcloud">NextCloud</h5>
+<h3 id="setup">
+  Setup
+  <a class="heading-link" href="#setup">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h5 id="nextcloud">
+  NextCloud
+  <a class="heading-link" href="#nextcloud">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
 <p>You do need a working NextCloud setup, you can see how I did mine in this <a href="https://www.daveevans.us/posts/moving-from-dropbox-to-nextcloud/">post</a>. To setup note taking integration, you first need to enable the Notes application within NextCloud.</p>
 <p>Go to Apps, the the &ldquo;Office and Text&rdquo; category, and click the &lsquo;Enable&rsquo; button under the Notes app.</p>
 <p><img src="https://www.daveevans.us/img/Notes_integration_1.png" alt="Notes_integration_1"></p>
@@ -142,7 +186,12 @@ Most of my note taking has reverted to just text files that reside spread across
 <p>Next, enable the QOwnNotes API integration within NextCloud.  Go back to Apps and select the &ldquo;Integration&rdquo; category.  Enable the QOwnNotesAPI app.</p>
 <p><img src="https://www.daveevans.us/img/Notes_integration_3.png" alt="Notes_integration_3"></p>
 <p>Now, you should have the Notes app and a Notes directory.  You can start creating notes now within NextCloud.</p>
-<h5 id="qownnotes-1">QOwnNotes</h5>
+<h5 id="qownnotes-1">
+  QOwnNotes
+  <a class="heading-link" href="#qownnotes-1">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
 <p>The setup of QOwnNotes is very easy, as the developer has created a snap package.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ snap search qownnotes
 Name       Version  Publisher  Notes  Summary
@@ -164,13 +213,19 @@ qownnotes 18.08.9 from <span style="font-style:italic">&#39;pbek&#39;</span> ins
 <p><img src="https://www.daveevans.us/img/Notes_integration_9.png" alt="Notes_integration_9"></p>
 <p>Now I can make that one note for the commands I <em><strong>ALWAYS</strong></em> look up &ndash; openssl</p>
 <p><img src="https://www.daveevans.us/img/Notes_integration_10.png" alt="Notes_integration_10"></p>
-<h4 id="previous-posts">Previous Posts</h4>
+<h4 id="previous-posts">
+  Previous Posts
+  <a class="heading-link" href="#previous-posts">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
 <ul>
 <li><a href="https://www.daveevans.us/posts/moving-from-dropbox-to-nextcloud/">Moving from Dropbox to NextCloud</a></li>
 <li><a href="https://www.daveevans.us/posts/migration-to-nextcloud-part-2/">Migraton to NextCloud, Part 2</a></li>
 </ul>
 
       </div>
+
 
       <footer>
         
@@ -201,24 +256,54 @@ qownnotes 18.08.9 from <span style="font-style:italic">&#39;pbek&#39;</span> ins
       </footer>
     </article>
 
-    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
   </section>
 
       </div>
 
-      <footer class="footer">
-  <section class="container">
-    
-     © 2021
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-    
-  </section>
-</footer>
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2021
+         Dave Evans 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
 
     </main>
+
+    
+      
+      <script src="https://www.daveevans.us/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js" integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -235,6 +320,17 @@ if (!doNotTrack) {
 </script>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>

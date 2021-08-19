@@ -89,7 +89,7 @@ As you can see I have completely redone my site. The previous site was running o
       
       <guid>https://www.daveevans.us/posts/kubernetes-on-raspberry-pi-the-hard-way-part-4/</guid>
       <description>Kubernetes on Raspberry Pi, The Hard Way - Part 1 Kubernetes on Raspberry Pi, The Hard Way - Part 2 Kubernetes on Raspberry Pi, The Hard Way - Part 3  Now its time to setup the worker nodes. This is where I will deviate the most from the original Kubernetes the Hard Way, as I plan to change the container runtime from containerd to docker.
-Install and Configure Docker These commands should be run on each worker node.</description>
+Install and Configure Docker    These commands should be run on each worker node.</description>
     </item>
     
     <item>
@@ -130,7 +130,7 @@ I have been playing around with Kubernetes for a couple months now. I have setup
       <guid>https://www.daveevans.us/posts/the-life-of-a-network-packet-in-linux/</guid>
       <description>I have encountered this problem numerous times, and every time I am told &amp;ldquo;There is something wrong with the network!!&amp;rdquo;
 What I really need is someone much more creative than me to write a children&amp;rsquo;s song similar to Schoolhouse Rock&amp;rsquo;s &amp;ldquo;I&amp;rsquo;m Just a Bill&amp;rdquo;, except for network packets
-Scenario There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0.</description>
+Scenario    There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0.</description>
     </item>
     
     <item>

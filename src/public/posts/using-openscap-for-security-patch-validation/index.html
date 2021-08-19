@@ -4,9 +4,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="Dave Evans">
-    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="description" content="I have been looking for a way to validate patches in my environment. This validation need to occur outside of the patch repository, because what if the repository is incomplete. This may seem like overkill (and it probably is), but the validation was really more about creating verifiable evidence that patching had occurred and everything was applied.
+My environment consists completely of Red Hat and Red Hat derivative distributions, so most of this will apply to those, but some may be applicable to other distributions as well.">
     <meta name="keywords" content="blog,devops,personal">
 
     <meta name="twitter:card" content="summary"/>
@@ -23,9 +28,6 @@ My environment consists completely of Red Hat and Red Hat derivative distributio
 <meta property="article:modified_time" content="2018-08-20T00:00:00+00:00" />
 
 
-    
-      <base href="https://www.daveevans.us/posts/using-openscap-for-security-patch-validation/">
-    
     <title>
   Using OpenSCAP for Security Patch Validation · Dave Evans
 </title>
@@ -34,14 +36,12 @@ My environment consists completely of Red Hat and Red Hat derivative distributio
       <link rel="canonical" href="https://www.daveevans.us/posts/using-openscap-for-security-patch-validation/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="https://www.daveevans.us/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css" integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -49,48 +49,67 @@ My environment consists completely of Red Hat and Red Hat derivative distributio
     
 
     
-      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
-    
 
     
-    
+
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://www.daveevans.us/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.daveevans.us/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
-  <body class=" ">
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="https://www.daveevans.us/">
       Dave Evans
     </a>
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
+    
   </section>
 </nav>
 
@@ -101,39 +120,57 @@ My environment consists completely of Red Hat and Red Hat derivative distributio
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Using OpenSCAP for Security Patch Validation</h1>
+          <h1 class="title">
+            <a class="title-link" href="https://www.daveevans.us/posts/using-openscap-for-security-patch-validation/">
+              Using OpenSCAP for Security Patch Validation
+            </a>
+          </h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fas fa-calendar"></i>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
               <time datetime='2018-08-20T00:00:00Z'>
                 August 20, 2018
               </time>
             </span>
             <span class="reading-time">
-              <i class="fas fa-clock"></i>
-              3 minutes read
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
             </span>
           </div>
           
+          
           <div class="tags">
-  <i class="fas fa-tag"></i>
-    <a href="https://www.daveevans.us/tags/openscap/">openscap</a></div>
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/openscap/">openscap</a>
+    </span></div>
 
         </div>
       </header>
 
       <div>
+        
         <p>I have been looking for a way to validate patches in my environment.  This validation need to occur outside of the patch repository, because what if the repository is incomplete.  This may seem like overkill (and it probably is), but the validation was really more about creating verifiable evidence that patching had occurred and everything was applied.</p>
 <p>My environment consists completely of Red Hat and Red Hat derivative distributions, so most of this will apply to those, but some may be applicable to other distributions as well.</p>
-<h2 id="openscap">OpenSCAP</h2>
+<h2 id="openscap">
+  OpenSCAP
+  <a class="heading-link" href="#openscap">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <p>I have previously worked with <a href="https://www.open-scap.org/">OpenSCAP</a> as a security compliance validation tool.  I had set it up within our Red Hat Satellite infrastructure, and it worked OK.  The issue I had run into previously was that, within Satellite, it did not have a way to customize the security content. None of the SCAP content was 100% compliant with our server configuration, and I did not want to explain how a &ldquo;failure&rdquo; on a compliance check should be ignored. So I shelved the project for awhile. I believe content customization has been added in Satellite 6.3, but we aren&rsquo;t there yet and I haven&rsquo;t had time to work with it.</p>
 <p>However, it is also possible to perform server scans using just OVAL content, which Red Hat releases with each security errata, and the base scanner tool.  Red Hat updates this content constantly, and provide it for download on their <a href="https://www.redhat.com/security/data/metrics/">Security Data page</a>.</p>
 <p>The great part about this is that we can download this OVAL content at the same time that we synchronize our repositories.  Then, as part of the patching process we can run a scan before and after patching. The final report will &ldquo;hopefully&rdquo; show a 100% compliant system.  These scan reports provide us with the verifiable evidence of the security vulnerabilities that we just patched.</p>
 <p>OpenSCAP does provide the <a href="https://www.open-scap.org/tools/scap-workbench/">SCAP Workbench</a> as a tool to run these scans remotely.  I had played with it previously as a way to try and customize SCAP content.  Although, the last time I looked at it, it only ran on a Linux Desktop environment. Unfortunately, I don&rsquo;t have a good place to run a desktop in my environment, and don&rsquo;t really need one more machine to manage. However, OpenSCAP does provide a utilities called oscap-ssh which will allow you to run the scans remotely, and it provides a mechanism to use sudo for these scans.  The results are then created on the server you ran it from.  This makes the evidence collection I&rsquo;m looking for much simpler.</p>
 <p>Probably the one piece we are looking for is the ability to aggregate these scan results into a single report.  The reports that are created individually are great, but I really don&rsquo;t want to open 100+ of them to make sure everything is good.  The scan results are just XML files, so I&rsquo;m sure something can be written to do this (if it hasn&rsquo;t already).</p>
-<h2 id="how-to">How To</h2>
+<h2 id="how-to">
+  How To
+  <a class="heading-link" href="#how-to">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <p>The application documentation can be found <a href="https://www.open-scap.org/resources/documentation/">here</a>, and there is also a lot of information in the Red Hat Documentation.</p>
 <p>Installation is simple, as it is in the base repositories, and I see on the <a href="https://www.open-scap.org/download/">downloads</a> page that they do have Debian and Ubuntu packages.</p>
 <p>To install the base scanner</p>
@@ -151,6 +188,7 @@ My environment consists completely of Red Hat and Red Hat derivative distributio
 </code></pre></div><p><img src="https://www.daveevans.us/img/ssg-report.png" alt="ssg-report"></p>
 
       </div>
+
 
       <footer>
         
@@ -181,24 +219,54 @@ My environment consists completely of Red Hat and Red Hat derivative distributio
       </footer>
     </article>
 
-    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
   </section>
 
       </div>
 
-      <footer class="footer">
-  <section class="container">
-    
-     © 2021
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-    
-  </section>
-</footer>
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2021
+         Dave Evans 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
 
     </main>
+
+    
+      
+      <script src="https://www.daveevans.us/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js" integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -215,6 +283,17 @@ if (!doNotTrack) {
 </script>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>

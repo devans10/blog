@@ -4,9 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="Dave Evans">
-    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="description" content="How and why I moved my blog site to Kubernetes">
     <meta name="keywords" content="blog,devops,personal">
 
     <meta name="twitter:card" content="summary"/>
@@ -21,9 +25,6 @@
 <meta property="article:modified_time" content="2019-03-03T21:58:41-05:00" />
 
 
-    
-      <base href="https://www.daveevans.us/posts/deploying-my-blog-on-kubernetes/">
-    
     <title>
   Deploying My Blog on Kubernetes · Dave Evans
 </title>
@@ -32,14 +33,12 @@
       <link rel="canonical" href="https://www.daveevans.us/posts/deploying-my-blog-on-kubernetes/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="https://www.daveevans.us/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css" integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -47,48 +46,67 @@
     
 
     
-      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
-    
 
     
-    
+
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://www.daveevans.us/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.daveevans.us/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
-  <body class=" ">
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="https://www.daveevans.us/">
       Dave Evans
     </a>
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
+    
   </section>
 </nav>
 
@@ -99,38 +117,58 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Deploying My Blog on Kubernetes</h1>
+          <h1 class="title">
+            <a class="title-link" href="https://www.daveevans.us/posts/deploying-my-blog-on-kubernetes/">
+              Deploying My Blog on Kubernetes
+            </a>
+          </h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fas fa-calendar"></i>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
               <time datetime='2019-03-03T21:58:41-05:00'>
                 March 3, 2019
               </time>
             </span>
             <span class="reading-time">
-              <i class="fas fa-clock"></i>
-              5 minutes read
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
             </span>
           </div>
           
+          
           <div class="tags">
-  <i class="fas fa-tag"></i>
-    <a href="https://www.daveevans.us/tags/kubernetes/">kubernetes</a>
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/kubernetes/">kubernetes</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/terraform/">terraform</a></div>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/terraform/">terraform</a>
+    </span></div>
 
         </div>
       </header>
 
       <div>
+        
         <p>So its been quite awhile since I posted anything. That is because I have been very busy with some personal projects and doing a lot of studying of some new technologies.</p>
 <p>As you can see I have completely redone my site.  The previous site was running on the Ghost platform, which was spun up using a one-click deployment from <a href="https://www.digitalocean.com">DigitalOcean.</a>  Ghost was a good platform. I liked doing the posts in markdown, and it was easy to use.  However, like a lot of the blogging and content managment platforms it requires a database on the backend.  This made it necessary to have a beefier DigitalOcean droplet than I wanted to maintain, for a site that isn&rsquo;t getting all that much traffic.  In addition, I have been working on a couple projects that I want to run individual project sites for, and it didn&rsquo;t make sense for me to spin up different droplets for those, when they could easily fit on resources I&rsquo;m already paying for.</p>
-<h4 id="enter-hugo">Enter Hugo</h4>
+<h4 id="enter-hugo">
+  Enter Hugo
+  <a class="heading-link" href="#enter-hugo">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
 <p>I decided to move my entire site over to <a href="https://gohugo.io">Hugo</a>, a very fast, static site generator written in Go.  It was very easy to move everything in Ghost over to Hugo since the posts in both are done in markdown.  The only thing that was a bit of a pain was manually entering the post metadata, but, all in all, it wasn&rsquo;t that bad.  If you are interested in Hugo, the instuctions for getting started are <a href="https://gohugo.io/getting-started/quick-start/">here</a>.</p>
 <p>The other benefit of moving the site to this new framework is it makes it much easier to store the source code for my site in <a href="https://github.com">Github</a>.  Which will also give me the opportunity to do some automated deployments of my site in the future.</p>
-<h4 id="docker">Docker</h4>
+<h4 id="docker">
+  Docker
+  <a class="heading-link" href="#docker">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
 <p>I now have a statically generated site, with the source code in Github. This makes it very easy to run the site within a Docker container.</p>
 <p>In the Dockerfile, we first create a container and install the Hugo extended version from source and pygments, which is required for the source code blocks.  Then, hugo is run on the site to generate the static files.  Next, a new container is built from the nginx alpine image, the static files generated in the first stage are then copied to the new container.</p>
 <p>Once the container is built, I push it up to my private docker hub registry.</p>
@@ -151,10 +189,20 @@
 </span><span style=""></span><span style="font-weight:bold">FROM</span><span style="font-style:italic"> nginx:stable-alpine</span><span style="">
 </span><span style=""></span><span style="font-weight:bold">COPY</span> --from=STAGEONE /public/ /usr/share/nginx/html/<span style="">
 </span><span style=""></span><span style="font-weight:bold">EXPOSE</span><span style="font-style:italic"> 80</span><span style="">
-</span></code></pre></div><h4 id="kubernetes">Kubernetes</h4>
+</span></code></pre></div><h4 id="kubernetes">
+  Kubernetes
+  <a class="heading-link" href="#kubernetes">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
 <p>If I&rsquo;m going to run the site in a Docker container, why not run it on Kubernetes.  Digital Ocean recently released limited availability of managed Kubernetes clusters.  Spinning up a new cluster took about 5 minutes, and was much cheaper than running the managed services from AWS.  They only charge for the droplets, block storage, and load balancers. There is no additional charge for the cluster itself.</p>
 <p>So, I know that a lot of people are thinking that it is complete overkill to run a small website on Kubernetes.  You are completely right. This is way overboard.  However, I have been studying and working with Kubernetes a lot recently, and I want to learn as much as I can.  This is just the next stage in my education.  I need to run something in &ldquo;Production&rdquo;, so I can learn to more about it and find out its shortcomings and advantages.</p>
-<h4 id="deployment-with-terraform">Deployment with Terraform</h4>
+<h4 id="deployment-with-terraform">
+  Deployment with Terraform
+  <a class="heading-link" href="#deployment-with-terraform">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
 <p>Now that I have my cluster up and running, deploying the site should be a snap. However, since I&rsquo;m using this as a major learning exercise, I&rsquo;m also going to use another technology I have been working with lately&hellip; Terraform.</p>
 <p><em>Note: As I&rsquo;m writing this, I just realized I should have created the entire Kubernetes cluster on DigitalOcean using Terraform.  I guess I just found my next task</em></p>
 <p>For the deployment I created two modules, dns and kubernetes.  The <code>main.tf</code> of the kubernetes module, creates a namespace, a docker registry secret, a deployment, and a service. It then outputs the IP address of the service, which is used in the dns module.</p>
@@ -277,6 +325,7 @@
 
       </div>
 
+
       <footer>
         
 
@@ -306,24 +355,54 @@
       </footer>
     </article>
 
-    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
   </section>
 
       </div>
 
-      <footer class="footer">
-  <section class="container">
-    
-     © 2021
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-    
-  </section>
-</footer>
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2021
+         Dave Evans 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
 
     </main>
+
+    
+      
+      <script src="https://www.daveevans.us/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js" integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -340,6 +419,17 @@ if (!doNotTrack) {
 </script>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>

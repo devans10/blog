@@ -13,7 +13,7 @@
       <pubDate>Thu, 19 Aug 2021 09:39:21 -0400</pubDate>
       
       <guid>https://www.daveevans.us/personal/goals/</guid>
-      <description>August 15 - 21    Goal Sun Mon Tues Wed Thur Fri Sat Met     Lose 2 lbs. 248 249 249 247 245      10 push up challenge X X X X X      NRC Week 2  X  X        </description>
+      <description>August 15 - 21       Goal Sun Mon Tues Wed Thur Fri Sat Met     Lose 2 lbs. 248 249 249 247 245      10 push up challenge X X X X X      NRC Week 2  X  X        </description>
     </item>
     
     <item>
@@ -97,7 +97,7 @@ As you can see I have completely redone my site. The previous site was running o
       <pubDate>Sun, 03 Mar 2019 20:53:54 -0500</pubDate>
       
       <guid>https://www.daveevans.us/projects/</guid>
-      <description>Terraform Provider for Flash  Project Site Github Repository  PuGo  Golang library for interacting with the Pure Storage APIs. Currently, has packages for FlashArray and Pure1 Github Repository  Terraform Provider for OVM  Github Repository Terraform Registry  </description>
+      <description>Terraform Provider for Flash     Project Site Github Repository  PuGo     Golang library for interacting with the Pure Storage APIs. Currently, has packages for FlashArray and Pure1 Github Repository  Terraform Provider for OVM     Github Repository Terraform Registry  </description>
     </item>
     
     <item>
@@ -106,8 +106,8 @@ As you can see I have completely redone my site. The previous site was running o
       <pubDate>Sun, 03 Mar 2019 18:09:32 -0500</pubDate>
       
       <guid>https://www.daveevans.us/resume/</guid>
-      <description>Profile  I am a well-seasoned Infrastructure Engineer with professional experience with a variety of technologies in large scale environments. A passion for learning drives me to continually explore new technology both professionally and personally. I enjoy the challenge of creating secure, stable, and functional systems and applications, and solving all the problems that arise during the development life cycle.
-Professional Experience  Duquesne Light Company May 2020 - Present Principal Architect  Responsible for developing a DevOps strategy for the IT organization Develop a CI/CD architecture that can be utilized to streamline project delivery and operations  March 2015 – May 2020 Infrastructure Engineer IV  Administer RedHat Linux 5, 6, and 7 environment of over 425 servers Developed a Cofiguration Management system using Puppet Created custom puppet modules for deploying applications within our environment.</description>
+      <description>Profile     I am a well-seasoned Infrastructure Engineer with professional experience with a variety of technologies in large scale environments. A passion for learning drives me to continually explore new technology both professionally and personally. I enjoy the challenge of creating secure, stable, and functional systems and applications, and solving all the problems that arise during the development life cycle.
+Professional Experience     Duquesne Light Company    May 2020 - Present    Principal Architect     Responsible for developing a DevOps strategy for the IT organization Develop a CI/CD architecture that can be utilized to streamline project delivery and operations  March 2015 – May 2020    Infrastructure Engineer IV     Administer RedHat Linux 5, 6, and 7 environment of over 425 servers Developed a Cofiguration Management system using Puppet Created custom puppet modules for deploying applications within our environment.</description>
     </item>
     
     <item>
@@ -138,7 +138,7 @@ Resume</description>
       
       <guid>https://www.daveevans.us/posts/kubernetes-on-raspberry-pi-the-hard-way-part-4/</guid>
       <description>Kubernetes on Raspberry Pi, The Hard Way - Part 1 Kubernetes on Raspberry Pi, The Hard Way - Part 2 Kubernetes on Raspberry Pi, The Hard Way - Part 3  Now its time to setup the worker nodes. This is where I will deviate the most from the original Kubernetes the Hard Way, as I plan to change the container runtime from containerd to docker.
-Install and Configure Docker These commands should be run on each worker node.</description>
+Install and Configure Docker    These commands should be run on each worker node.</description>
     </item>
     
     <item>
@@ -179,7 +179,7 @@ I have been playing around with Kubernetes for a couple months now. I have setup
       <guid>https://www.daveevans.us/posts/the-life-of-a-network-packet-in-linux/</guid>
       <description>I have encountered this problem numerous times, and every time I am told &amp;ldquo;There is something wrong with the network!!&amp;rdquo;
 What I really need is someone much more creative than me to write a children&amp;rsquo;s song similar to Schoolhouse Rock&amp;rsquo;s &amp;ldquo;I&amp;rsquo;m Just a Bill&amp;rdquo;, except for network packets
-Scenario There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0.</description>
+Scenario    There are 2 servers. Each server has 2 network interfaces that all have listening addresses in separate subnets. The Default route for each server is via eth0.</description>
     </item>
     
     <item>

@@ -4,9 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="Dave Evans">
-    <meta name="description" content="Dave Evans&#39; personal website">
+    <meta name="description" content="Terraform, welcome to the Pure biosphere!">
     <meta name="keywords" content="blog,devops,personal">
 
     <meta name="twitter:card" content="summary"/>
@@ -21,9 +25,6 @@
 <meta property="article:modified_time" content="2019-06-03T20:55:47-04:00" />
 
 
-    
-      <base href="https://www.daveevans.us/posts/pure-storage-guestblog/">
-    
     <title>
   Pure Storage Guest Blog · Dave Evans
 </title>
@@ -32,14 +33,12 @@
       <link rel="canonical" href="https://www.daveevans.us/posts/pure-storage-guestblog/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="https://www.daveevans.us/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://www.daveevans.us/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css" integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -47,48 +46,67 @@
     
 
     
-      <link rel="stylesheet" href="https://www.daveevans.us/css/custom.css" />
-    
 
     
-    
+
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.daveevans.us/img/favicon.ico" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://www.daveevans.us/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.daveevans.us/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.80.0" />
   </head>
 
-  <body class=" ">
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="https://www.daveevans.us/">
       Dave Evans
     </a>
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/personal/">Personal Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/posts/">Tech Blog</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/about/">About</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.daveevans.us/projects/">Projects</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
+    
   </section>
 </nav>
 
@@ -99,38 +117,55 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Pure Storage Guest Blog</h1>
+          <h1 class="title">
+            <a class="title-link" href="https://www.daveevans.us/posts/pure-storage-guestblog/">
+              Pure Storage Guest Blog
+            </a>
+          </h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fas fa-calendar"></i>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
               <time datetime='2019-06-03T20:55:47-04:00'>
                 June 3, 2019
               </time>
             </span>
             <span class="reading-time">
-              <i class="fas fa-clock"></i>
-              11 minutes read
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              11-minute read
             </span>
           </div>
           
+          
           <div class="tags">
-  <i class="fas fa-tag"></i>
-    <a href="https://www.daveevans.us/tags/terraform/">terraform</a>
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/terraform/">terraform</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/purestorage/">purestorage</a>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/purestorage/">purestorage</a>
+    </span>
       <span class="separator">•</span>
-    <a href="https://www.daveevans.us/tags/golang/">golang</a></div>
+    <span class="tag">
+      <a href="https://www.daveevans.us/tags/golang/">golang</a>
+    </span></div>
 
         </div>
       </header>
 
       <div>
+        
         <p><em>This blog was originally posted on the <a href="https://blog.purestorage.com/pure-storage-terraform-provider/">Pure Storage Blog</a></em></p>
 <p><em>For the last couple months, I have been working on some side projects to work with Pure Storage. These projects gave me the opportunity to learn golang and learn more about code development, testing, and even some continuous integration.  The links to these projects are on my <a href="https://github.com/devans10">github</a>, and on the Projects page of this site.</em></p>
 <p>I began to take a look at <a href="https://terraform.io">Terraform</a> to use within our environment for infrastructure deployments.  The goal was twofold. First, to have a way to perform scripted, templated deployments using an Infrastructure-as-Code philosophy. Second, to use the same tool across multiple platforms both on-premises (VMware, OracleVM, and <a href="https://www.purestorage.com/flashstack">FlashStack</a>) and in the cloud (AWS and Azure).</p>
-<h3 id="what-is-terraform">What is Terraform?</h3>
+<h3 id="what-is-terraform">
+  What is Terraform?
+  <a class="heading-link" href="#what-is-terraform">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>From the <a href="https://terraform.io/intro/index.html">terraform.io</a> web site:</p>
 <blockquote>
 <p>Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.</p>
@@ -147,7 +182,12 @@
 <p>Once I had completed the Go REST Client, I was able to proceed with the <a href="https://github.com/devans10/terraform-provider-flash">Terraform Provider Flash</a>. <del>Watch the video below to see it in action as I demo it:</del></p>
 <p>If you’re interested in playing with the source code I put together for that demo video, check out the <a href="https://github.com/devans10/puredemo">puredemo GitHub repo</a>.</p>
 <p>Now, let’s do a quick walk-through on how to use the provider in the section below.</p>
-<h3 id="terraform-provider-usage">Terraform Provider Usage</h3>
+<h3 id="terraform-provider-usage">
+  Terraform Provider Usage
+  <a class="heading-link" href="#terraform-provider-usage">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>First, you will need to install Terraform. The latest binary can be downloaded here. Once the binary file is in your path, you can verify the install by running <code>terraform</code> which should generate output similar to this:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ terraform
 Usage: terraform [--version] [--help] &lt;command&gt; [args]
@@ -461,11 +501,17 @@ purestorage_volume.testvol_tf_res: Destruction complete after 0s
 
 Destroy complete! Resources: 5 destroyed.
 </code></pre></div><p>All of the infrastructure that you had created through the Terraform configuration above has now been destroyed.  However, there is one caveat; the provider does NOT eradicate volumes or protection groups as a safety measure against accidental data deletion.  Therefore, if you would like to execute <code>terraform apply</code> again to recreate it as a fresh copy, you would either need to wait 24 hours or manually eradicate the volumes and protection group.  A good practice to avoid this protection in a production environment would be to use a randomized volume name.  This can be achieved by using the Terraform random_id provider, and appending the generated ID to the volume name.  This gives the ability to recreate an infrastructure immediately, and provides the protection of the 24-hour deletion clock provided by the Pure Storage FlashArray.</p>
-<h3 id="conclusion">Conclusion</h3>
+<h3 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>There is a lot that can be done with Terraform using variables, workspaces, modules, and multiple providers.  If you would like to learn more about Terraform, HashiCorp has a good tutorial.</p>
 <p>While the Terraform Provider Flash has basic functionality, I do plan to continue maintaining it and adding more features. If you have any interest in contributing to the provider, I am very open to issues or pull requests to the GitHub repository. There is also a project website that has the full documentation for the provider and links to the binary downloads.  If you have questions or would like to interact with me, please consider joining the Pure Storage Code Slack Community, where I’m @DaveEvans, and there are channels for both #golang and #terraform.</p>
 
       </div>
+
 
       <footer>
         
@@ -496,24 +542,54 @@ Destroy complete! Resources: 5 destroyed.
       </footer>
     </article>
 
-    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
   </section>
 
       </div>
 
-      <footer class="footer">
-  <section class="container">
-    
-     © 2021
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-    
-  </section>
-</footer>
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2021
+         Dave Evans 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
 
     </main>
+
+    
+      
+      <script src="https://www.daveevans.us/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js" integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -530,6 +606,17 @@ if (!doNotTrack) {
 </script>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>
