@@ -1,17 +1,26 @@
 +++ 
 draft = false
-date = 2021-08-28T20:00:00-04:00
+date = 2021-09-05T21:30:00-04:00
 title = "Goals"
 slug = "" 
 +++
+## September 5 - September 11
+| Goal                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|----------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                |  242 |      |      |      |      |      |      |     |
+| 15 push up x2 per day      |   X  |      |      |      |      |      |      |     |
+| 15 Air Squats  x2 per day  |   X  |      |      |      |      |      |      |     |
+| Run 6 miles                |  2 m |      |      |      |      |      |      |     |
+| 12,500 Steps per day       |14,053|      |      |      |      |      |      |     |
+
 ## August 29 - September 4
 | Goal                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |----------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                |  243 |      |      |      |      |      |      |     |
-| 10 push up challenge       |   X  |      |      |      |      |      |      |     |
-| 15 Air Squats              |   X  |      |      |      |      |      |      |     |
-| NRC Getting Started Week 4 |   X  |      |      |      |      |      |      |     |
-| 12,500 Steps per day       |      |      |      |      |      |      |      |     |
+| Lose 2 lbs.                |  243 |  242 |  241 |  241 |  243 |  241 |  243 |  No |
+| 10 push up challenge       |   X  |  X   |   X  |   X  |   X  |   X  |   X  | Yes |
+| 15 Air Squats              |   X  |  X   |   X  |   X  |   X  |   X  |   X  | Yes |
+| NRC Getting Started Week 4 |   X  |      |   X  |      |   X  |   X  |      | Yes |
+| 12,500 Steps per day       |18,704|17,768|14,159|14,202|13,034|12,589|13,466| Yes |
 
 ## August 22 - 28
 | Goal                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
