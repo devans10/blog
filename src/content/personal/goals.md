@@ -6,9 +6,8 @@ slug = ""
 +++
 ## Epics                            
 
-| Lose 100 lbs.   | Run 1/2 Marathon | Get off Blood Pressure Medication |
+| Lose 80 lbs.     | Run 1/2 Marathon | Get off Blood Pressure Medication |
 |------------------|------------------|-----------------------------------|
-
 
 ## Weekly Goals
 
