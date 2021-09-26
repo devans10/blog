@@ -1,24 +1,44 @@
 +++ 
 draft = false
-date = 2021-09-14T20:23:00-04:00
+date = 2021-09-25T21:23:00-04:00
 title = "Goals"
 slug = "" 
 +++
 ## Epics                            
 
-| Lose 80 lbs.     | Run 1/2 Marathon | Get off Blood Pressure Medication |
-|------------------|------------------|-----------------------------------|
+| Lose 80 lbs.     | Run 1/2 Marathon | Get off Blood Pressure Medication |100 Consecutive Pushups|
+|------------------|------------------|-----------------------------------|-----------------------|
 
 ## Weekly Goals
+
+### September 26 - October 2
+| Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                                                |      |      |      |      |      |      |      |     |
+| [100 Pushups Week 2](https://hundredpushups.com/week2.html)|      |      |      |      |      |      |      |     |
+| 25 Air Squats  x2 per day                                  |      |      |      |      |      |      |      |     |
+| Run 20k                                                    |      |      |      |      |      |      |      |     |
+| 12,500 Steps per day                                       |      |      |      |      |      |      |      |     |
+
+
+### September 19 - September 25
+| Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                                                |  239 |  235 |  235 |  234 |  233 |  233 |  233 |  ✔️  |
+| [100 Pushups Week 1](https://hundredpushups.com/week1.html)|      |  41  |      |  53  |      |  58  |      |  ✔️  |
+| 25 Air Squats  x2 per day                                  |  ✔️   |  ✔️   |   ✔️  |   ✔️  |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| Run 10 miles                                               | 2.5m |      | 2.5m |      | 2.5m |      | 3.1m |  ✔️  |
+| 12,500 Steps per day                                       |16,654|14,837|15,261|13,893|16,150|14,751|13,355|  ✔️  |
+
 
 ### September 12 - September 18
 | Goal                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |----------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                |  239 |  238 |  237 |      |      |      |      |     |
-| 15 push up x2 per day      |   ✔️  |   ✔️  |   ✔️  |      |      |      |      |     |
-| 15 Air Squats  x2 per day  |   ✔️  |   ✔️  |   ✔️  |      |      |      |      |     |
-| Run 10 miles               | 2.5m |      | 2.5m |      |      |      |      |     |
-| 12,500 Steps per day       |14,219|15,777|15,618|      |      |      |      |     |
+| Lose 2 lbs.                |  239 |  238 |  237 |  237 |  238 |  238 |  238 |  ❌ |
+| 15 push up x2 per day      |   ✔️  |   ✔️  |   ✔️  |   ✔️  |   ✔️  |   ✔️  |  ✔️   |  ✔️  |
+| 15 Air Squats  x2 per day  |   ✔️  |   ✔️  |   ✔️  |   ✔️  |   ✔️  |   ✔️  |  ✔️   |  ✔️  |
+| Run 10 miles               | 2.5m |      | 2.5m |      | 2.5m |      | 2.5m |  ✔️  |
+| 12,500 Steps per day       |14,219|15,777|16,007|13,933|13,879|14,153|14,413|  ✔️  |
 
 ### September 5 - September 11
 | Goal                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
