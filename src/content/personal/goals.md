@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-09-25T21:23:00-04:00
+date = 2021-10-04T21:30:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -11,14 +11,24 @@ slug = ""
 
 ## Weekly Goals
 
+### October 3 - October 9
+| Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                                                |  236 | 234  |      |      |      |      |      |     |
+| [100 Pushups Week 2](https://hundredpushups.com/week2.html)|      |  63  |      |      |      |      |      |     |
+| 25 Air Squats  x2 per day                                  |   ✔️  |  ✔️   |      |      |      |      |      |     |
+| Run 14m                                                    | 3.5m |      |      |      |      |      |      |     |
+| Run/Walk 7.75m per day                                     | 9.3m | 7.8m |      |      |      |      |      |     |
+
+
 ### September 26 - October 2
 | Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                                                |      |      |      |      |      |      |      |     |
-| [100 Pushups Week 2](https://hundredpushups.com/week2.html)|      |      |      |      |      |      |      |     |
-| 25 Air Squats  x2 per day                                  |      |      |      |      |      |      |      |     |
-| Run 20k                                                    |      |      |      |      |      |      |      |     |
-| 12,500 Steps per day                                       |      |      |      |      |      |      |      |     |
+| Lose 2 lbs.                                                |  235 | 238  |  239 |  239 |  239 |  236 |  236 |  ❌ |
+| [100 Pushups Week 2](https://hundredpushups.com/week2.html)|      |  63  |      |   72 |      |  81  |      |  ❌ |
+| 25 Air Squats  x2 per day                                  |   ✔️  |   ✔️  |  ✔️   |  ✔️   |   ✔️  |   ✔️  |  ✔️   |  ✔️  |
+| Run 20k                                                    | 5.8k |      |  5k  |      |  5k  |      |  5k  |  ✔️  |
+| 12,500 Steps per day                                       |15,919|14,914|15,974|14,999|16,850|13,494|15,512|  ✔️  |
 
 
 ### September 19 - September 25
