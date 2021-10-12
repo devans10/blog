@@ -1,5 +1,5 @@
 name: Deploy
-on: [commit]
+on: [push]
 jobs:
   DeploySite:
     runs-on: ubuntu-latest
