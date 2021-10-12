@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd ./src
-/usr/local/bin/hugo
+hugo
 
 /usr/bin/rsync -a public/* root@www.daveevans.us:/var/www/www.daveevans.us/
 /usr/bin/ssh root@www.daveevans.us /usr/bin/systemctl reload apache2
