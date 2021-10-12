@@ -16,5 +16,8 @@ jobs:
       - name: Adding Known Hosts
         run: ssh-keyscan -H www.daveevans.us >> ~/.ssh/known_hosts
 
+      - name: install Hugo
+        run: sh ./cicd/install_hugo.sh
+        
       - name: Run Deploy
-        run: sh ./deploy.sh
+        run: sh ./cicd/deploy.sh
