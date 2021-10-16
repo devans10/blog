@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-10-11T21:20:00-04:00
+date = 2021-10-16T08:50:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -15,18 +15,18 @@ slug = ""
 ### October 10 - October 16
 | Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                                                |  230 | 230  |      |      |      |      |      |     |
-| [100 Pushups Week 3](https://hundredpushups.com/week3.html)|      |  56  |      |      |      |      |      |     |
-| 25 Air Squats  x2 per day                                  |   ✔️  |  ✔️   |      |      |      |      |      |     |
-| Run 16m                                                    | 4m   |      |      |      |      |      |      |     |
-| Run/Walk 7.75m per day                                     | 10m  | 8.4m |      |      |      |      |      |     |
+| Lose 2 lbs.                                                |  230 | 230  |  232 | 231  |  230 | 229  | 228  | ✔️  |
+| [100 Pushups Week 3](https://hundredpushups.com/week3.html)|      |  56  |      |      |      |      |      | ❌  |
+| 25 Air Squats  x2 per day                                  |  ✔️  | ✔️   | ✔️  | ✔️  |  ✔️  | ✔️  |      |     |
+| Run 16m                                                    | 4m   |      |  4m  |      |  4m  |      |      |     |
+| Run/Walk 7.75m per day                                     | 10m  | 8.4m | 9.1m | 7.7m | 8.6m | 9.6m |      |     |
 
 ### October 3 - October 9
 | Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Lose 2 lbs.                                                |  236 | 234  |  235 | 234  |  233 |  234 |  231 |  ✔️  |
 | [100 Pushups Week 2](https://hundredpushups.com/week2.html)|      |  63  |      |  72  |      |  81  |      |  ✔️  |
-| 25 Air Squats  x2 per day                                  |   ✔️  |  ✔️   |   ✔️  |   ✔️  |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| 25 Air Squats  x2 per day                                  |  ✔️  |  ✔️ |  ✔️  | ✔️  |  ✔️  |  ✔️ |  ✔️  |  ✔️  |
 | Run 14m                                                    | 3.5m |      | 3.5m |      | 3.5m | 3.5m |  1m  |  ✔️  |
 | Run/Walk 7.75m per day                                     | 9.3m | 7.8m | 8.8m | 8.1m | 9.1m | 8.8m | 8.5m |  ✔️  |
 
