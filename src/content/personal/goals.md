@@ -13,12 +13,12 @@ slug = ""
 ## Weekly Goals
 
 ### October 17 - October 23
-| Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
-|------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                                                |  228 | 228  |      |      |      |      |      |     |
-| 30 Air Squats  x2 per day                                  |  ✔️  |      |      |      |      |      |      |     |
-| Run 18m                                                    | 4.5m |      |      |      |      |      |      |     |
-| Run/Walk 7.75m per day                                     | 8.9m |      |      |      |      |      |      |     |
+| Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                  |  228 | 228  |      |      |      |      |      |     |
+| 30 Air Squats  x2 per day    |  ✔️  |      |      |      |      |      |      |     |
+| Run 18m                      | 4.5m |      |      |      |      |      |      |     |
+| Run/Walk 7.75m per day       | 8.9m |      |      |      |      |      |      |     |
 
 ### October 10 - October 16
 | Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
