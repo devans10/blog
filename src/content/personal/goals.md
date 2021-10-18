@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-10-16T08:50:00-04:00
+date = 2021-10-18T07:50:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -12,14 +12,22 @@ slug = ""
 
 ## Weekly Goals
 
+### October 17 - October 23
+| Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                                                |  228 | 228  |      |      |      |      |      |     |
+| 30 Air Squats  x2 per day                                  |  ✔️  |      |      |      |      |      |      |     |
+| Run 18m                                                    | 4.5m |      |      |      |      |      |      |     |
+| Run/Walk 7.75m per day                                     | 8.9m |      |      |      |      |      |      |     |
+
 ### October 10 - October 16
 | Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Lose 2 lbs.                                                |  230 | 230  |  232 | 231  |  230 | 229  | 228  | ✔️  |
 | [100 Pushups Week 3](https://hundredpushups.com/week3.html)|      |  56  |      |      |      |      |      | ❌  |
-| 25 Air Squats  x2 per day                                  |  ✔️  | ✔️   | ✔️  | ✔️  |  ✔️  | ✔️  |      |     |
-| Run 16m                                                    | 4m   |      |  4m  |      |  4m  |      |      |     |
-| Run/Walk 7.75m per day                                     | 10m  | 8.4m | 9.1m | 7.7m | 8.6m | 9.6m |      |     |
+| 25 Air Squats  x2 per day                                  |  ✔️  | ✔️   | ✔️  | ✔️  |  ✔️  | ✔️  |  ✔️  |  ✔️ |
+| Run 16m                                                    | 4m   |      |  4m  |      |  4m  |      | 5.5m | ✔️  |
+| Run/Walk 7.75m per day                                     | 10m  | 8.4m | 9.1m | 7.7m | 8.6m | 9.6m | 8.7m |  ✔️ |
 
 ### October 3 - October 9
 | Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
