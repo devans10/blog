@@ -11,7 +11,7 @@ slug = ""
 
 
 ## Weekly Goals
-### October 17 - October 23
+### October 24 - October 30
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Lose 2 lbs.                  |  228 | 226  |      |      |      |      |      |     |
