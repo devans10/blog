@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-10-18T07:50:00-04:00
+date = 2021-10-25T13:50:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -11,14 +11,21 @@ slug = ""
 
 
 ## Weekly Goals
+### October 17 - October 23
+| Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                  |  228 | 226  |      |      |      |      |      |     |
+| 30 Air Squats  x2 per day    |  ✔️  |      |      |      |      |      |      |     |
+| Run 20m                      |  5m  |      |      |      |      |      |      |     |
+| Run/Walk 7.75m per day       | 7.8m |      |      |      |      |      |      |     |
 
 ### October 17 - October 23
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                  |  228 | 228  |      |      |      |      |      |     |
-| 30 Air Squats  x2 per day    |  ✔️  |      |      |      |      |      |      |     |
-| Run 18m                      | 4.5m |      |      |      |      |      |      |     |
-| Run/Walk 7.75m per day       | 8.9m |      |      |      |      |      |      |     |
+| Lose 2 lbs.                  |  228 | 228  |  230 | 232  |  231 |  230 | 229  | ❌ |
+| 30 Air Squats  x2 per day    |  ✔️  | ✔️  |  ✔️ |  ✔️  |  ✔️ |   ✔️ |  ✔️ | ✔️  |
+| Run 18m                      | 4.5m |      | 4.5m |      | 4.5m |      |  5m  | ✔️ |
+| Run/Walk 7.75m per day       | 8.9m | 8.6m |  9m  | 8.1m | 8.6m | 8.3m | 8.7m | ✔️  |
 
 ### October 10 - October 16
 | Goal                                                       | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
