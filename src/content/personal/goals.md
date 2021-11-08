@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-10-25T13:50:00-04:00
+date = 2021-11-08T7:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -11,13 +11,29 @@ slug = ""
 
 
 ## Weekly Goals
+### November 7 - November 13
+| Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                  |  222 | 222  |      |      |      |      |      |     |
+| 30 Air Squats  x2 per day    |  ✔️  |      |      |      |      |      |      |     |
+| Run 40k                      | 10k  |      |      |      |      |      |      |     |
+| Run/Walk 7.75m per day       | 9.3m |      |      |      |      |      |      |     |
+
+### October 31 - November 6
+| Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                  |  225 | 223  |  225 |  225 |  226 | 224  | 224  | ❌ |
+| 30 Air Squats  x2 per day    |  ✔️  |  ✔️  |  ✔️ |  ✔️  | ✔️  |  ✔️  | ✔️  | ✔️  |
+| Run 40k                      | 10k  |      | 10k  |      | 5k   | 10k  | 10k  | ✔️  |
+| Run/Walk 7.75m per day       |10.6m | 8.8m |10.2m | 8.7m | 9.2m |10.2m | 8.2m | ✔️  |
+
 ### October 24 - October 30
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                  |  228 | 226  |      |      |      |      |      |     |
-| 30 Air Squats  x2 per day    |  ✔️  |      |      |      |      |      |      |     |
-| Run 20m                      |  5m  |      |      |      |      |      |      |     |
-| Run/Walk 7.75m per day       | 7.8m |      |      |      |      |      |      |     |
+| Lose 2 lbs.                  |  228 | 226  |  226 | 225  | 224  | 225  |  225 | ✔️  |
+| 30 Air Squats  x2 per day    |  ✔️  | ✔️  | ✔️  | ✔️   | ✔️  |  ✔️  |  ✔️ | ✔️  |
+| Run 20m                      |  5m  |      |  5m  |      | 5m   |      | 5m   | ✔️  |
+| Run/Walk 7.75m per day       | 7.8m | 8.3m | 8.8m | 8.8m |10.1m | 8.2m | 8.5m | ✔️  |
 
 ### October 17 - October 23
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
