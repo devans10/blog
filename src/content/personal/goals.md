@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-11-08T7:00:00-04:00
+date = 2021-11-08T07:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
