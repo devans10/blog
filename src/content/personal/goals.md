@@ -1,23 +1,31 @@
 +++ 
 draft = false
-date = 2021-11-08T07:00:00-04:00
+date = 2021-11-17T07:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
 ## Epics                            
 
-| Lose 80 lbs.     | Run 1/2 Marathon | Get off Blood Pressure Medication |100 Consecutive Pushups|
-|------------------|------------------|-----------------------------------|-----------------------|
+| ~Lose 80 lbs.~ ✔️| Run 1/2 Marathon | Get off Blood Pressure Medication |100 Consecutive Pushups|
+|-------------------|------------------|-----------------------------------|-----------------------|
 
 
 ## Weekly Goals
+### November 14 - November 20
+| Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
+|------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                  |  222 | 221  |  219 |  218 |      |      |      |     |
+| 30 Air Squats  x2 per day    |  ✔️  | ✔️  |  ✔️  |      |      |      |      |     |
+| Run 25m                      | 3.1m | 4.1m |  5m  |      |      |      |      |     |
+| Run/Walk 7.75m per day       | 8.3m | 8.1m | 9.8m |      |      |      |      |     |
+
 ### November 7 - November 13
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                  |  222 | 222  |      |      |      |      |      |     |
-| 30 Air Squats  x2 per day    |  ✔️  |      |      |      |      |      |      |     |
-| Run 40k                      | 10k  |      |      |      |      |      |      |     |
-| Run/Walk 7.75m per day       | 9.3m |      |      |      |      |      |      |     |
+| Lose 2 lbs.                  |  222 | 222  |  222 |  222 |  224 |  222 | 222  | ❌ |
+| 30 Air Squats  x2 per day    |  ✔️  | ✔️  |  ✔️ |  ✔️  | ✔️   |  ✔️ |  ✔️ | ✔️  |
+| Run 40k                      | 10k  |      | 10k  |      | 5k   |      | 15k  | ✔️ |
+| Run/Walk 7.75m per day       | 9.3m | 9m   | 9.4m |  9m  | 7.9m | 9.4m | 11.2m| ✔️ |
 
 ### October 31 - November 6
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
