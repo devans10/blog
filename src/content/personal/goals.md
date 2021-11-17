@@ -6,8 +6,8 @@ slug = ""
 +++
 ## Epics                            
 
-| ~Lose 80 lbs.~ ✔️| Run 1/2 Marathon | Get off Blood Pressure Medication |100 Consecutive Pushups|
-|-------------------|------------------|-----------------------------------|-----------------------|
+| ~~Lose 80 lbs.~~ ✔️| Run 1/2 Marathon | Get off Blood Pressure Medication |100 Consecutive Pushups|
+|----------------------|------------------|-----------------------------------|-----------------------|
 
 
 ## Weekly Goals
