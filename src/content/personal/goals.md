@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-11-17T07:00:00-04:00
+date = 2021-11-19T07:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -14,10 +14,10 @@ slug = ""
 ### November 14 - November 20
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                  |  222 | 221  |  219 |  218 |      |      |      |     |
-| 30 Air Squats  x2 per day    |  ✔️  | ✔️  |  ✔️  |      |      |      |      |     |
-| Run 25m                      | 3.1m | 4.1m |  5m  |      |      |      |      |     |
-| Run/Walk 7.75m per day       | 8.3m | 8.1m | 9.8m |      |      |      |      |     |
+| Lose 2 lbs.                  |  222 | 221  |  219 |  218 |  219 | 219  |      |     |
+| 30 Air Squats  x2 per day    |  ✔️  | ✔️  |  ✔️  | ✔️  | ✔️   |      |      |     |
+| Run 25m                      | 3.1m | 4.1m |  5m  | 3.1m | 3.1m | 3.1m |      |     |
+| Run/Walk 7.75m per day       | 8.3m | 8.1m | 9.8m |  8m  | 9.7m |      |      |     |
 
 ### November 7 - November 13
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
