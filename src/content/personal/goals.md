@@ -11,12 +11,19 @@ slug = ""
 
 
 ## Weekly Goals
+### November 28 - December 4
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Close Apple Watch Rings                                               |  ✔️   |      |      |      |      |      |      |     |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |      |      |      |      |      |      |     |
+
+
 ### November 21 - November 27
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
 |------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Close Apple Watch Rings      |  ✔️   |      |      |      |      |      |      |     |
-| 1400 Active Calories         |  ✔️   |      |      |      |      |      |      |     |
-| Run 25m                      | 5m   |      |      |      |      |      |      |     |
+| Close Apple Watch Rings      |  ✔️   |  ✔️   |   ✔️  |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| 1400 Active Calories         | 1553 | 1194 | 1522 | 1552 | 1161 | 1848 | 1688 | ❌  |
+| Run 25m                      | 5m   |      | 3.1m |  5m  | 3.1m | 6.2m | 6.2m |  ✔️  |
 
 ### November 14 - November 20
 | Goal                         | Sun  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Met |
