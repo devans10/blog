@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-11-21T20:00:00-04:00
+date = 2021-12-18T19:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -11,11 +11,23 @@ slug = ""
 
 
 ## Weekly Goals
+### December 12 - December 18
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+
+### December 5 - December 11
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+
 ### November 28 - December 4
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Close Apple Watch Rings                                               |  ✔️   |      |      |      |      |      |      |     |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |      |      |      |      |      |      |     |
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
 
 
 ### November 21 - November 27
