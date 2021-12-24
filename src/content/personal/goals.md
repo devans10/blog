@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-12-18T19:00:00-04:00
+date = 2021-12-24T13:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -11,6 +11,12 @@ slug = ""
 
 
 ## Weekly Goals
+### December 19 - December 25
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |     |     |     |    |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |     |     |    |
+
 ### December 12 - December 18
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
