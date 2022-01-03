@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2021-12-24T13:00:00-04:00
+date = 2022-01-03T07:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -11,25 +11,37 @@ slug = ""
 
 
 ## Weekly Goals
-### December 19 - December 25
+### January 3 - January 9
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |     |     |     |    |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |     |     |    |
+| Close Apple Watch Rings                                               |     |     |     |     |  |  |   | |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |     |     |     |     |     |   |   |  |
 
-### December 12 - December 18
+### December 27 - January 2
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️ |  ✔️ |  ✔️ | ✔️ |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   | ✔️  |  ✔️ | ✔️ |
+
+### December 20 - December 26
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️ |  ✔️ |  ✔️ | ✔️ |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   | ✔️  |  ✔️ | ✔️ |
+
+### December 13 - December 19
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
 | [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
 
-### December 5 - December 11
+### December 6 - December 12
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
 | [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
 
-### November 28 - December 4
+### November 29 - December 5
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
