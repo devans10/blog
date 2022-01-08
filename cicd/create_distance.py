@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 plt.style.use("fivethirtyeight")
 
-data = pd.read_csv("../src/data/runs.csv")
+data = pd.read_csv("src/data/runs.csv")
 
 data = data.set_index(pd.DatetimeIndex(data["date"].values))
 
