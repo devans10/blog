@@ -5,8 +5,8 @@ title = "Running Charts"
 slug = "" 
 +++
 
-![Distance](../../images/run_distance.png)
+![Distance](/img/run_distance.png)
 
-![Pace](../../images/run_time.png)
+![Pace](/img/run_time.png)
 
-![Cadence](../../images/run_cadence.png)
+![Cadence](/img/run_cadence.png)

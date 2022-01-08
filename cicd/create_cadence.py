@@ -24,6 +24,6 @@ plt.xlabel("Date")
 plt.ylabel("Steps per Minute")
 
 
-plt.savefig("../src/images/run_cadence.png", format="png", bbox_inches="tight")
+plt.savefig("../src/static/img/run_cadence.png", format="png", bbox_inches="tight")
 
 # plt.show()

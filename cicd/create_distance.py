@@ -24,6 +24,6 @@ plt.xlabel("Date")
 plt.ylabel("Miles")
 
 
-plt.savefig("../src/images/run_distance.png", format="png", bbox_inches="tight")
+plt.savefig("../src/static/img/run_distance.png", format="png", bbox_inches="tight")
 
 # plt.show()
