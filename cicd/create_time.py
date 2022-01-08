@@ -36,6 +36,6 @@ plt.xlabel("Date")
 plt.ylabel("Minutes per Mile")
 
 
-plt.savefig("../src/static/img/run_time.png", format="png", bbox_inches="tight")
+plt.savefig("src/static/img/run_time.png", format="png", bbox_inches="tight")
 
 # plt.show()
