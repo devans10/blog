@@ -39,4 +39,12 @@ So getting healthy became a priority, but once I started running I enjoyed the c
 
 One of the benefits of doing an organized race is the chance to run for a cause.  In 2017, I lost my father after a short battle with lung cancer. In 2021, my mother and my mother-in-law both had bouts with cancer that thankfully have turned out positive.  
 
-I will be running to raise money for the American Cancer Society with a goal of raising $500.  The American Cancer Society provides things like breakthrough research, a 24/7 cancer helpline, and free rides to chemotherapy.  
+I will be running to raise money for the American Cancer Society with a goal of raising $500.  
+
+For the first time in history, the American Cancer Society's mission is at risk - including their ability to fund cancer research. The American Cancer Society needs to be here to help patients face cancer with comprehensive support, but they need our help to be able to do so. Every dollar will truly make a difference right now.
+
+Taking part in this event gives me the chance to make a difference and honor those touched by cancer by raising funds for groundbreaking research and services for people dealing with cancer. I'm also participating to inspire hope for those facing the disease and raising money for the American Cancer Society's event to help save lives from cancer.  I hope you'll consider signing up too.
+
+Funds raised support cancer patient programs and groundbreaking research that can help save lives. This event also celebrates over 15.5 million cancer survivors nationwide. 15.5 MILLION. That's huge. That's why I'd love your support. Will you join me? And if you can't would you be so kind as to make a [donation?](https://raceroster.com/events/2022/50391/2022-dicks-sporting-goods-pittsburgh-marathon-weekend/pledge/participant/13614795)
+
+DetermiNation is the American Cancer Society’s event endurance program, spanning a variety of sports including cycling, running, hiking, yoga, and more.  The collective efforts of the dedicated athletes who use their fortitude to help raise funds to take down cancer are nothing short of amazing.
