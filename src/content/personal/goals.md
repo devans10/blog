@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2022-01-10T07:00:00-04:00
+date = 2022-01-13T07:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -14,8 +14,8 @@ slug = ""
 ### January 10 - January 16
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Close Apple Watch Rings                                               |      |      |      |      |      |      |      |     |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |      |      |      |      |      |      |      |     |
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |   ✔️  |   ✔️  |      |      |      |     |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |   ✔️  |   ✔️  |      |      |      |     |
 
 ### January 3 - January 9
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
