@@ -11,11 +11,17 @@ slug = ""
 
 
 ## Weekly Goals
-### January 10 - January 16
+### January 24 - January 30
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |     |     |      |      |      |      |     |
 | [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |     |     |      |      |      |      |     |
+
+### January 17 - January 23
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
 
 ### January 10 - January 16
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
