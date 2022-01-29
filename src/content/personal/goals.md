@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2022-01-18T07:00:00-04:00
+date = 2022-01-29T15:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -22,49 +22,49 @@ slug = ""
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |3.12m |      |4.04m |      |4.01m |5.01m |10.01m|26.19m|
 
 ### January 10 - January 16
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Close Apple Watch Rings                                               |  ✔️  |  ✔️ |  ✔️  |  ✔️ |  ✔️  | ✔️  | ✔️  | ✔️  |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️  |  ✔️ |  ✔️  |  ✔️ |  ✔️  | ✔️  | ✔️  | ✔️  |
+| Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |   ✔️  |   ✔️  |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |3.10m |      |4.01m |      |3.60m |13.45m|3.14m |26.3m|
 
 ### January 3 - January 9
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |   ✔️  |  ✔️  |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |   ✔️  |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |3.11m | 4.0m |      |4.01m |      |10.01m|3.01m |24.14m|
 
 ### December 27 - January 2
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   | ✔️   |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   | ✔️    |  ✔️   | ✔️   |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |4.11m |      |3.10m |      |3.14m |3.17m |  12m |25.52m|
 
 ### December 20 - December 26
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   | ✔️   |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   | ✔️    |  ✔️   | ✔️   |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |3.14m |      |3.01m |      |  3m  | 4.2m |  10m |23.35m|
 
 ### December 13 - December 19
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |3.11m |      |  5m  |      |6.26m |  4m  |8.01m |26.41m|
 
 ### December 6 - December 12
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  3.14m   |    |  5.01m   |      |  5m   |  5.04m   |  7.02m   |  25.21m  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |3.14m |      |5.01m |      |  5m  |5.04m |7.02m |25.21m|
 
 ### November 29 - December 5
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  3.12m   |  5m   |     |  3.12m   |     |  5.31m   |  7.01m   |  23.56m  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |3.12m |  5m  |      |3.12m |      |5.31m |7.01m |23.56m|
 
 
 ### November 21 - November 27
