@@ -11,6 +11,13 @@ slug = ""
 
 
 ## Weekly Goals
+### January 31 - February 6
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                                                           |      |      |      |      |      |      |      |     |
+| Close Apple Watch Rings                                               |      |      |      |      |      |      |      |     |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |      |      |      |      |      |      |      |     |
+
 ### January 24 - January 30
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
