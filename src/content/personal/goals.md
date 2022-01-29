@@ -6,16 +6,17 @@ slug = ""
 +++
 ## Epics                            
 
-| ~~Lose 80 lbs.~~ ✔️| Run a Marathon | 100 Consecutive Pushups|
-|-------------------|----------------| -----------------------|
+| Lose ~~80~~ 100lbs.| Run a Marathon | 100 Consecutive Pushups|
+|--------------------|----------------| -----------------------|
 
 
 ## Weekly Goals
 ### January 24 - January 30
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Close Apple Watch Rings                                               |  ✔️   |     |     |      |      |      |      |     |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |     |     |      |      |      |      |     |
+| Lose 2 lbs.                                                           |  209 |  210 | 209  | 209  |  206 |  205 |      |     |
+| Close Apple Watch Rings                                               |  ✔️   |   ✔️  |  ✔️   |  ✔️   |   ✔️  |      |      |     |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) | 3.31m| 3.08m|      |4.21m |      | 3m   |      |     |
 
 ### January 17 - January 23
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
@@ -57,13 +58,13 @@ slug = ""
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  3.14m   |    |  5.01m   |      |  5m   |  5.04m   |  7.02m   |  25.21m  |
 
 ### November 29 - December 5
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Close Apple Watch Rings                                               |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) |  3.12m   |  5m   |     |  3.12m   |     |  5.31m   |  7.01m   |  23.56m  |
 
 
 ### November 21 - November 27

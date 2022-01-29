@@ -15,7 +15,7 @@ slug = ""
 | ~~6~~    | ~~January  3 - January  9~~      | ~~Easy 5k~~ |  ~~3m~~  | ~~walk~~ |  ~~4m~~  | ~~walk~~ | ~~4m~~   | ~~10m~~      |    24.1m    |
 | ~~7~~    | ~~January 10 - January 16~~      | ~~Easy 5k~~ |  ~~3m~~  | ~~walk~~ |  ~~3m~~  | ~~walk~~ | ~~3m~~   | ~~13.1m~~    |    25.2m    |
 | ~~8~~    | ~~January 17 - January 23~~      | ~~Easy 5k~~ |  ~~4m~~  | ~~walk~~ |  ~~4m~~  | ~~walk~~ | ~~5m~~   | ~~10m~~      |    26.1m    |
-| 9    | January 24 - January 30      | ~~Easy 5k~~ |  3m  | walk |  3m  | walk | 3m   | 14m      |    26.1m    |
+| 9    | January 24 - January 30      | ~~Easy 5k~~ |  ~~3m~~  | ~~walk~~ |  ~~3m~~  | ~~walk~~ | ~~3m~~   | 14m      |    26.1m    |
 | 10   | January 31 - February 6      | Easy 5k |  4m  | walk |  4m  | walk | 5m   | 10m      |    26.1m    |
 | 11   | February  7 - February 13    | Easy 5k |  3m  | walk |  3m  | walk | 3m   | 15m      |    27.1m    |
 | 12   | February 14 - February 20    | Easy 5k |  3m  | walk |  4m  | walk | 6m   | 10m      |    28.1m    |
