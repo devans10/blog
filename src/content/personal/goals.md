@@ -11,19 +11,26 @@ slug = ""
 
 
 ## Weekly Goals
-### January 31 - February 6
+## February 7 - February 13
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
 | Lose 2 lbs.                                                           |      |      |      |      |      |      |      |     |
 | Close Apple Watch Rings                                               |      |      |      |      |      |      |      |     |
 | [Marathon Training Plan](https://www.daveevans.us/personal/training/) |      |      |      |      |      |      |      |     |
 
+### January 31 - February 6
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                                                           | 206  |  206 |  208 |  206 |  205 |  205 |      |     |
+| Close Apple Watch Rings                                               |  ✔️   |   ✔️  |  ✔️   |  ✔️   |   ✔️  |      |      |     |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) | 3.2m |  4m  |      |  5m  |      | 3.1m |      |     |
+
 ### January 24 - January 30
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                                                           |  209 |  210 | 209  | 209  |  206 |  205 |      |     |
-| Close Apple Watch Rings                                               |  ✔️   |   ✔️  |  ✔️   |  ✔️   |   ✔️  |      |      |     |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) | 3.31m| 3.08m|      |4.21m |      | 3m   |      |     |
+| Lose 2 lbs.                                                           |  209 |  210 | 209  | 209  |  206 |  205 |  205 |  ✔️  |
+| Close Apple Watch Rings                                               |  ✔️   |   ✔️  |  ✔️   |  ✔️   |   ✔️  |   ✔️  |   ✔️  |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) | 3.31m| 3.08m|      |4.21m |      | 3m   |12.1m |25.7m|
 
 ### January 17 - January 23
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
