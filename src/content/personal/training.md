@@ -18,14 +18,14 @@ slug = ""
 | ~~9~~    | ~~January 24 - January 30~~      | ~~Easy 5k~~ |  ~~3m~~  | ~~walk~~ |  ~~3m~~  | ~~walk~~ | ~~3m~~   | ~~14m~~      |    26.1m    |
 | ~~10~~   | ~~January 31 - February 6~~      | ~~Easy 5k~~ |  ~~4m~~  | ~~walk~~ |  ~~4m~~  | ~~walk~~ | ~~5m~~   | ~~10m~~      |    26.1m    |
 | ~~11~~   | ~~February  7 - February 13~~    | ~~Easy 5k~~ |  ~~3m~~  | ~~walk~~ |  ~~3m~~  | ~~walk~~ | ~~3m~~   | ~~15m~~      |    27.1m    |
-| 12   | February 14 - February 20    | Easy 5k |  3m  | walk |  4m  | walk | 6m   | 10m      |    28.1m    |
-| 13   | February 21 - February 27    | Easy 5k |  3m  | walk |  3m  | walk | 4m   | 15m      |    28.1m    |
-| 14   | February 28 - March 6        | Easy 5k |  3m  | walk |  4m  | walk | 7m   | 10m      |    29.1m    |
-| 15   | March  7 - March 13          | Easy 5k |  3m  | walk |  3m  | walk | 3m   | 16m      |    28.1m    |
-| 16   | March 14 - March 20          | Easy 5k |  3m  | walk |  4m  | walk | 5m   | 13.1m    |    28.2m    |
-| 17   | March 21 - March 27          | Easy 5k |  3m  | walk |  3m  | walk | 3m   | 18m      |    30.1m    |
-| 18   | March 28 - April  3          | Easy 5k |  3m  | walk |  3m  | walk | 2m   | 20m      |    31.1m    |
-| 19   | April  4 - April  9          | Easy 5k |  3m  | walk |  2m  | walk | 2m   | 22m      |    32.1m    |
-| 20   | April 10 - April 17          | Easy 5k |  4m  | walk |  4m  | walk | 5m   | 10m      |    26.1m    |
-| 21   | April 18 - April 24          | Easy 5k |  4m  | walk |  4m  | walk | 4m   |  6m      |    21.1m    |
-| 22   | April 25 - May 1             | Easy 5k |  2m  | walk |  2m  | walk | walk | Race Day |    33.2m    |
+| 12   | February 14 - February 20    | Easy 5k |  4m  | walk |  5m  | walk | 6m   | 13.1m    |    31.2m    |
+| 13   | February 21 - February 27    | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 15m      |    31.1m    |
+| 14   | February 28 - March 6        | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 16m      |    32.1m    |
+| 15   | March  7 - March 13          | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 17m      |    33.1m    |
+| 16   | March 14 - March 20          | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 18m      |    34.1m    |
+| 17   | March 21 - March 27          | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 19m      |    35.1m    |
+| 18   | March 28 - April  3          | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 20m      |    36.1m    |
+| 19   | April  4 - April  9          | Easy 5k |  4m  | walk |  5m  | walk | 3m   | 22m      |    37.1m    |
+| 20   | April 10 - April 17          | Easy 5k |  4m  | walk |  4m  | walk | 5m   | 13.1m    |    30.2m    |
+| 21   | April 18 - April 24          | Easy 5k |  3m  | walk |  3m  | walk | 3m   |  10m     |    22.2m    |
+| 22   | April 25 - May 1             | Easy 5k |  2m  | walk |  2m  | walk | Easy 5k | Race Day |    33.2m    |
