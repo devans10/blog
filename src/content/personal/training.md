@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2022-02-13T06:01:36-05:00
+date = 2022-03-04T015:01:36-05:00
 title = "Training"
 slug = "" 
 +++
@@ -18,9 +18,9 @@ slug = ""
 | ~~9~~    | ~~January 24 - January 30~~      | ~~Easy 5k~~ |  ~~3m~~  | ~~walk~~ |  ~~3m~~  | ~~walk~~ | ~~3m~~   | ~~14m~~      |    26.1m    |
 | ~~10~~   | ~~January 31 - February 6~~      | ~~Easy 5k~~ |  ~~4m~~  | ~~walk~~ |  ~~4m~~  | ~~walk~~ | ~~5m~~   | ~~10m~~      |    26.1m    |
 | ~~11~~   | ~~February  7 - February 13~~    | ~~Easy 5k~~ |  ~~3m~~  | ~~walk~~ |  ~~3m~~  | ~~walk~~ | ~~3m~~   | ~~15m~~      |    27.1m    |
-| 12   | February 14 - February 20    | Easy 5k |  4m  | walk |  5m  | walk | 6m   | 13.1m    |    31.2m    |
-| 13   | February 21 - February 27    | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 15m      |    31.1m    |
-| 14   | February 28 - March 6        | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 16m      |    32.1m    |
+| ~~12~~   | ~~February 14 - February 20~~    | ~~Easy 5k~~ |  ~~4m~~  | ~~walk~~ |  ~~5m~~  | ~~walk~~ | ~~6m~~   | ~~13.1m~~    |    31.2m    |
+| ~~13~~   | ~~February 21 - February 27~~    | ~~Easy 5k~~ |  ~~4m~~  | ~~walk~~ |  ~~5m~~  | ~~walk~~ | ~~4m~~   | ~~15m~~      |    31.1m    |
+| 14   | February 28 - March 6        | ~~Easy 5k~~ |  ~~4m~~  | ~~walk~~ |  ~~5m~~  | ~~walk~~ | 4m   | 16m      |    32.1m    |
 | 15   | March  7 - March 13          | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 17m      |    33.1m    |
 | 16   | March 14 - March 20          | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 18m      |    34.1m    |
 | 17   | March 21 - March 27          | Easy 5k |  4m  | walk |  5m  | walk | 4m   | 19m      |    35.1m    |
