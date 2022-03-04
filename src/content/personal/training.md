@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2022-03-04T015:01:36-05:00
+date = 2022-03-04T15:01:36-05:00
 title = "Training"
 slug = "" 
 +++
