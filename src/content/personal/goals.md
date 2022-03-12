@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2022-03-04T15:00:00-04:00
+date = 2022-03-12T08:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
@@ -14,9 +14,16 @@ slug = ""
 ## February 28 - March 6
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
 |-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
-| Lose 2 lbs.                                                           | 203  |  204 |  202 | 201  |  201 |      |      |     |
+| Lose 2 lbs.                                                           | 202  |  201 |  201 | 203  |  200 |  202 |      |     |
 | Close Apple Watch Rings                                               |  ✔️   |   ✔️  |  ✔️   |  ✔️   |   ✔️  |      |      |     |
-| [Marathon Training Plan](https://www.daveevans.us/personal/training/) | 3.1m |      |  4m  | 4.13m|      |      |      |     |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) | 3.11m| 3.11m|      | 4m   |  5m  |      |      |     |
+
+## February 28 - March 6
+| Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
+|-----------------------------------------------------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:---:|
+| Lose 2 lbs.                                                           | 203  |  204 |  202 | 201  |  201 |  203 |  204 | ❌  |
+| Close Apple Watch Rings                                               |  ✔️   |   ✔️  |  ✔️   |  ✔️   |   ✔️  |  ✔️   |  ✔️   |  ✔️  |
+| [Marathon Training Plan](https://www.daveevans.us/personal/training/) | 3.1m |      |  4m  | 4.13m|      | 4.11m|11.13m|26.17m|
 
 ## February 21 - February 27
 | Goal                                                                  | Mon  | Tues | Wed  | Thur | Fri  | Sat  | Sun  | Met |
