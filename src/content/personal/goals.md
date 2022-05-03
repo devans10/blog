@@ -1,13 +1,13 @@
 +++ 
 draft = false
-date = 2022-03-12T08:00:00-04:00
+date = 2022-05-03T08:00:00-04:00
 title = "Goals"
 slug = "" 
 +++
 ## Epics                            
 
-| Lose ~~80~~ 100lbs.| Run a Marathon | 100 Consecutive Pushups|
-|--------------------|----------------| -----------------------|
+| ~~Lose 100lbs.~~| ~~Run a Marathon~~ | 100 Consecutive Pushups|
+|-----------------|--------------------| -----------------------|
 
 
 ## Weekly Goals
