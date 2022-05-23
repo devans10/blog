@@ -5,7 +5,7 @@ title = "Training"
 slug = "" 
 +++
 
-## Liberty Mile Training Plan
+## 2022 Liberty Mile Training Plan
 
 | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |:------:|:-------:|:---------:|:--------:|:------:|:--------:|:------:|
@@ -18,7 +18,7 @@ slug = ""
 | 3x Easy/Hard 2/8 | Easy 55 min | 1 Mile TT              | Easy 60 min | Rest/XC | Easy 55 min | Easy 60 min |
 | Easy/Hard 10/5, 8/4, 6/3, 4/2, 2/1 | Easy 60 min | Easy/Hard .75m/.5m/.5m/.25m/.25m | Easy 60 min | *Race Day* | | |
 
-## 2020 Pittsburgh Marathon Training Plan
+## 2022 Pittsburgh Marathon Training Plan
 
 | Week | Dates                        | Mon     | Tues | Wed  | Thur | Fri  | Sat  | Sun      | Total Miles |
 |:----:|------------------------------|:-------:|:----:|:----:|:----:|:----:|:----:|:--------:|:-----------:|
