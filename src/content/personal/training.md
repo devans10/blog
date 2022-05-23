@@ -7,16 +7,16 @@ slug = ""
 
 ## 2022 Liberty Mile Training Plan
 
-| Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
-|:------:|:-------:|:---------:|:--------:|:------:|:--------:|:------:|
-| 3x Easy/Hard 8/2 | Easy 25 min | 1 Mile TT              | Easy 30 min | Rest/XC | Easy 25 min | Easy 30 min |
-| 3x Easy/Hard 7/3 | Easy 30 min | 2x Easy/Hard .75m/.25m | Easy 35 min | Rest/XC | Easy 30 min | Easy 35 min |
-| 3x Easy/Hard 6/4 | Easy 35 min | 3x Easy/Hard .5m/.25m  | Easy 40 min | Rest/XC | Easy 35 min | Easy 40 min |
-| 3x Easy/Hard 5/5 | Easy 40 min | 4x Easy/Hard .25m/.25m | Easy 45 min | Rest/XC | Easy 40 min | Easy 45 min |
-| 3x Easy/Hard 4/6 | Easy 45 min | 3x Easy/Hard .25m/.5m  | Easy 50 min | Rest/XC | Easy 45 min | Easy 50 min |
-| 3x Easy/Hard 3/7 | Easy 50 min | 2x Easy/Hard .25m/.75m | Easy 55 min | Rest/XC | Easy 50 min | Easy 55 min |
-| 3x Easy/Hard 2/8 | Easy 55 min | 1 Mile TT              | Easy 60 min | Rest/XC | Easy 55 min | Easy 60 min |
-| Easy/Hard 10/5, 8/4, 6/3, 4/2, 2/1 | Easy 60 min | Easy/Hard .75m/.5m/.5m/.25m/.25m | Easy 60 min | *Race Day* | | |
+| Week | Dates             | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+|:----:|:-----------------:|:------:|:-------:|:---------:|:--------:|:------:|:--------:|:------:|
+| 1    | May 30 - June 5   | 3x Easy/Hard 8/2 | Easy 25 min | 1 Mile TT              | Easy 30 min | Rest/XC | Easy 25 min | Easy 30 min |
+| 2    | June 6 - June 12  | 3x Easy/Hard 7/3 | Easy 30 min | 2x Easy/Hard .75m/.25m | Easy 35 min | Rest/XC | Easy 30 min | Easy 35 min |
+| 3    | June 13 - June 20 | 3x Easy/Hard 6/4 | Easy 35 min | 3x Easy/Hard .5m/.25m  | Easy 40 min | Rest/XC | Easy 35 min | Easy 40 min |
+| 4    | June 21 - June 27 | 3x Easy/Hard 5/5 | Easy 40 min | 4x Easy/Hard .25m/.25m | Easy 45 min | Rest/XC | Easy 40 min | Easy 45 min |
+| 5    | June 28 - July 3  | 3x Easy/Hard 4/6 | Easy 45 min | 3x Easy/Hard .25m/.5m  | Easy 50 min | Rest/XC | Easy 45 min | Easy 50 min |
+| 6    | July 4 - July 10  | 3x Easy/Hard 3/7 | Easy 50 min | 2x Easy/Hard .25m/.75m | Easy 55 min | Rest/XC | Easy 50 min | Easy 55 min |
+| 7    | July 11 - July 17 | 3x Easy/Hard 2/8 | Easy 55 min | 1 Mile TT              | Easy 60 min | Rest/XC | Easy 55 min | Easy 60 min |
+| 8    | July 18 - July 22 | Easy/Hard 10/5, 8/4, 6/3, 4/2, 2/1 | Easy 60 min | Easy/Hard .75m/.5m/.5m/.25m/.25m | Easy 60 min | *Race Day* | | |
 
 ## 2022 Pittsburgh Marathon Training Plan
 
