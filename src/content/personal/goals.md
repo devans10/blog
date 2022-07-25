@@ -6,10 +6,10 @@ slug = ""
 +++
 ## Epics                            
 
-| Weight Loss     | Running            | Strength               |
-|-----------------|--------------------| -----------------------|
-| ~~Lose 80lbs.~~ | ~~Run a Marathon~~ | 100 Consecutive Pushups|
-| ~~Lose 100lbs.  | Run Sub 7 min mile |                        |
+| Weight Loss       | Running                  | Strength               |
+|-------------------|--------------------------| -----------------------|
+| ~~Lose 80lbs.~~   | ~~Run a Marathon~~       | 100 Consecutive Pushups|
+| ~~Lose 100lbs.~~  | ~~Run Sub 7 min mile~~   |                        |
 
 
 
