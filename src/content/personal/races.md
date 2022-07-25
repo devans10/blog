@@ -10,7 +10,7 @@ slug = ""
 | 2022 Pittsburgh Marathon          | May 1, 2022   | A - 4:30 ❌               | 4:39:05 | 
 |                                   |               | B - 4:45 ✔️                |         |
 |                                   |               | C - Run the whole thing ✔️ |         |
-| 2022 Liberty Mile                 | July 22, 2022 | A - Sub 6 ❌              | 0:02:26 |
+| 2022 Liberty Mile                 | July 22, 2022 | A - Sub 6 ❌              | 0:06:26 |
 |                                   |               | B - Sub 6:30 ✔️            |         |
 |                                   |               | C - Sub 7 ✔️               |         |
 | 2022 Great Race (10K)             | Sept 25, 2022 | A - Sub 50                |         |
