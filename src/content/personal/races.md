@@ -1,7 +1,7 @@
 +++ 
 draft = false
-date = 2022-10-21T12:01:36-05:00
-title = "Races"
+date = 2022-12-29T12:01:36-05:00
+title = "2022 Races"
 slug = "" 
 +++
 
@@ -17,4 +17,6 @@ slug = ""
 |                                   |               | B - Sub 54 ✔️               |         |
 | 2022 Pittsburgh Penquins 6.6K Run | Oct 9, 2022   | A - Sub 32 ✔️               | 0:31:59 |
 |                                   |               | B - Sub 36 ✔️               |         |
-| 2022 EQT 10-Miler                 | Nov 6, 2022   | Sub 90                    |         |
+| 2022 EQT 10-Miler                 | Nov 6, 2022   | Sub 90 ✔️                   | 1:24:26 |
+| 2022 YMCA Turkey Trot - 5K        | Nov 24, 2022  |                            | 0:25:15 |
+| 2022 YMCA Turkey Trot - 5M        | Nov 24, 2022  | Sub 40 ✔️                   | 0:38:27 |
